@@ -829,7 +829,6 @@ class Home extends Component {
                                         <h3>Homework Platform</h3>
                                         <div className="mk-product-tagline">Replaces WebAssign · Pearson · Wiley · Cengage</div>
                                         <p className="mk-product-desc">The most advanced online homework system for Physics — free-response grading at ~99% accuracy with step-by-step personalized feedback, 24/7.</p>
-                                        <div className="mk-product-tam">TAM: $1.2B · Already generating revenue</div>
                                         <ul className="mk-product-features">
                                             <li>Free-response auto-grading: equations, text, diagrams</li>
                                             <li>Step-level feedback identifying root causes of errors</li>
@@ -837,14 +836,13 @@ class Home extends Component {
                                             <li>Handwritten, stylus, or keyboard equation input</li>
                                             <li>Instructor dashboard + TA Copilot™</li>
                                         </ul>
-                                        <Link to="/requestDemo" className="mk-btn-card">Learn More →</Link>
+                                        <Link to="/educator" className="mk-btn-card">Learn More →</Link>
                                     </div>
                                     <div className="mk-product-card" id="prod-testprep">
                                         <div className="mk-product-icon">🎯</div>
                                         <h3>Test Prep AI</h3>
                                         <div className="mk-product-tagline">AP Physics 1 &amp; 2</div>
                                         <p className="mk-product-desc">Precision-targeted test prep powered by micro-concept mastery. AP exam-aligned rubrics, Harvard-designed practice tests, immediate diagnostic analytics.</p>
-                                        <div className="mk-product-tam">TAM: $4B D2C market · AP pilots underway</div>
                                         <ul className="mk-product-features">
                                             <li>5 AP Physics 1 &amp; 2 practice tests — Harvard-designed</li>
                                             <li>Practice Mode + Exam Mode with timed simulation</li>
@@ -860,7 +858,6 @@ class Home extends Component {
                                         <h3>Independent Courses</h3>
                                         <div className="mk-product-tagline">Replaces Stride · Coursera · Synchronous Tutoring</div>
                                         <p className="mk-product-desc">Full AI-powered courses for students without access to qualified instructors — starting with AP Physics 1 &amp; 2, then expanding across K–12 STEM.</p>
-                                        <div className="mk-product-tam">TAM: $1.5B+ · 1.2M AP students constrained by access</div>
                                         <ul className="mk-product-features">
                                             <li>Complete AP Physics curriculum, AI-delivered</li>
                                             <li>Self-paced with adaptive proficiency checkpoints</li>
