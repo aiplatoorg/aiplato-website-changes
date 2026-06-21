@@ -316,6 +316,8 @@ button:not(.collapsed) {
         min-width: 224px;
         padding: 8px;
         z-index: 1001;
+        /* guard against global rule `[class*="item"] > div { height:100% }` */
+        height: auto !important;
     }
 
     /* hover bridge so the menu doesn't close in the 6px gap */

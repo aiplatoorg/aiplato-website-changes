@@ -120,7 +120,7 @@ class Navigation extends Component {
                   <Hyperlink onLinkClick={this.onMenuItemSelection} type="Link_Primary" className="nav-item" href="/">Home</Hyperlink>
 
                   {/* Products dropdown */}
-                  <div className="app-nav-dropdown nav-item">
+                  <div className="app-nav-dropdown">
                     <span className="nav-link app-nav-dropdown-toggle">Products <span className="app-nav-caret">▾</span></span>
                     <div className="app-nav-dropdown-menu">
                       <a href={`${process.env.PUBLIC_URL}/#prod-homework`} onClick={this.scrollToHome('prod-homework')} className="app-nav-dropdown-item">📚 Homework Platform</a>
@@ -132,7 +132,7 @@ class Navigation extends Component {
                   <Hyperlink onLinkClick={this.onMenuItemSelection} type="Link_Primary" className="nav-item" href="/educator">Educators</Hyperlink>
 
                   {/* About dropdown */}
-                  <div className="app-nav-dropdown nav-item">
+                  <div className="app-nav-dropdown">
                     <span className="nav-link app-nav-dropdown-toggle">About <span className="app-nav-caret">▾</span></span>
                     <div className="app-nav-dropdown-menu">
                       <Link onClick={this.onMenuItemSelection} to="/team" className="app-nav-dropdown-item">👥 Our Team</Link>
