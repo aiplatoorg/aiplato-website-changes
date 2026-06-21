@@ -1,0 +1,28 @@
+@import './variables';
+
+@mixin mq-generator($screen-type) {
+  @if $screen-type==$screen-type-small-and-up {
+    @media (min-width: 789px) {
+      @content;
+    }
+  }
+
+  @else if $screen-type==$large-screen {
+    @media (min-width: 1441px) {
+      @content;
+    }
+  }
+
+  @else if $screen-type==$screen-tablet-portrait {
+    @media (min-width: 990px) and (max-width: 1440px) {
+      @content;
+    }
+  }
+
+  @else if $screen-type==$screen-tablet-small {
+    @media (min-width: 790px) and (max-width: 990px) {
+      @content;
+    }
+  }
+
+}

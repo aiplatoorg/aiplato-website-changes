@@ -1,0 +1,46 @@
+// Brand typography (Adobe Typekit: ein7mez)
+$font-family-heading: quincy-cf, serif;
+$font-family-body: proxima-nova, sans-serif;
+
+// Font Size
+$font-size-60: 60px;
+$font-size-48: 48px;
+$font-size-32: 32px;
+$font-size-24: 24px;
+$font-size-18: 18px;
+
+// Font color
+$font-white: #FFFFFF;
+
+// Colors Primary
+$primary-p1:#FFFFFF ;
+$primary-link: #005AA4;
+
+// Background Color
+$background-color-b1:#110DA5 ;
+$background-color-b2:#FFFFFF ;
+$background-color-b3: #fbc23b;
+// $background-color-b4:#a9a9a9;
+$background-color-b4:rgb(169,169,169);
+$background-color-b5:#777474;
+$background-color-selection-s1:rgba(3,169,244,0.1);
+$hero-primary: rgba(3,169,244,0.75);
+
+
+// Neutrals
+$neutral-n1:#000000;
+$neutral-n2: rgba(0,0,0,0.87);
+$neutral-n3: rgba(0,0,0,0.60);
+$neutral-n4:#959595;
+$neutral-n5:rgba(151, 151, 151,0.4);
+$neutral-n6: #FFFFFF;
+
+// Hyperlinks
+$link_primary: rgba(0,0,0,0.87);
+$link_white: #FFFFFF;
+
+// screen size
+$screen-type-small-and-up: 'screen-type-small-and-up';
+$screen-tablet-portrait: 'tablet-portrait';
+$large-screen : 'large-screen';
+$screen-tablet-small:'screen-tablet-small';

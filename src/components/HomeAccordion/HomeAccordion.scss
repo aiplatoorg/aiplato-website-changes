@@ -1,0 +1,80 @@
+.homeAcc {
+    .MuiAccordion-root {
+        background-color: transparent ;
+        box-shadow: none ;
+        // color: #fff ;
+        // &::before{
+        //     background-color: rgba(255, 255, 255, 0.5) ;
+        // }
+
+    }
+
+    .MuiAccordion-root.Mui-expanded {
+        margin: 0px;
+
+        &::before {
+            opacity: 1 ;
+        }
+    }
+
+    .MuiAccordionSummary-content.Mui-expanded {
+        margin: 0 ;
+    }
+
+    .MuiAccordionSummary-content {
+        margin: 0;
+    }
+
+    .MuiAccordionSummary-root {
+        padding: 0 ;
+    }
+
+    .MuiAccordionSummary-root.Mui-expanded {
+        min-height: 48px ;
+    }
+
+    .MuiTypography-root {
+        font-size: 16px ;
+        font-family: proxima-nova, sans-serif ;
+    }
+
+    .accHdr {
+        // text-wrap: nowrap;
+        border-radius: 8px;
+        // background: rgba(0, 0, 0, 0.12);
+        padding: 6px 0px;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .MuiAccordionDetails-root {
+        padding: 0px 0 16px 0 ;
+    }
+
+}
+.accImg {
+    padding-top: 0px;
+}
+
+.accordian-buttons{
+    position: relative;
+    display: flex; 
+    justify-content: flex-start;
+}
+
+@media screen and (max-width:992px) {
+    .accImg {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+}
+
+@media screen and (max-width:576px) {
+    .accordian-buttons{
+        flex-direction: column;
+        text-align:center
+    }
+}

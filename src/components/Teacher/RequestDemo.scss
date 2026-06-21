@@ -1,0 +1,98 @@
+.heading-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-top: 10vh;
+}
+
+.heading-rays {
+    position: absolute;
+    top: -10px;
+    left: -20px;
+}
+
+.heading-rays span {
+    position: absolute;
+    width: 16px;
+    height: 3px;
+    background: #5b6bd5;
+    border-radius: 2px;
+}
+
+.heading-rays span:nth-child(1) {
+    top: -6px;
+    left: 28px;
+    transform: rotate(100deg);
+}
+
+.heading-rays span:nth-child(2) {
+    width: 30px;
+    top: -6px;
+    left: -8px;
+    transform: rotate(47deg);
+}
+
+.heading-rays span:nth-child(3) {
+    top: 18px;
+    left: -5px;
+    transform: rotate(18deg);
+}
+
+// RequestDemo form field tweaks
+.whiteBG {
+    // Equal padding inside inputs/selects
+    .MuiInputBase-input,
+    .MuiOutlinedInput-input,
+    .MuiSelect-select {
+        padding: 12px 14px;
+    }
+}
+
+// Separate mobile-only label shown above each field
+.mobileFieldLabel {
+    display: none;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 6px 0;
+    color: rgba(0, 0, 0, 0.87);
+    overflow-wrap: anywhere;
+}
+
+@media screen and (max-width: 576px) {
+    .mobileFieldLabel {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding-bottom: 5px;
+    }
+
+    // Hide built-in floating labels on mobile to avoid duplicates
+    .whiteBG {
+        .MuiInputLabel-root,
+        .MuiFormLabel-root {
+            display: none;
+        }
+
+        // Stack mobileFieldLabel + field and left-align
+        .MuiGrid-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        // Keep fields full width within the flex column
+        .MuiTextField-root,
+        .MuiFormControl-root {
+            width: 100%;
+        }
+
+        // Prevent "notched" broken outline when label is hidden
+        .MuiOutlinedInput-notchedOutline legend {
+            width: 0 !important;
+            max-width: 0 !important;
+            padding: 0 !important;
+            display: none !important;
+        }
+    }
+}

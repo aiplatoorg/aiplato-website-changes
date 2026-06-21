@@ -1,0 +1,33 @@
+.footerContainer {
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-family: proxima-nova, sans-serif;
+}
+
+.companyLink {
+    display: flex;
+    flex-direction: column;
+
+    a {
+        color: #ffffff;
+        font-size: 14px;
+        line-height: 30px;
+
+        &:hover {
+            color: #ffffff;
+        }
+    }
+}
+
+.copyrightText {
+    img {
+        width: 130px;
+        height: auto;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 0px 0 0px 0px;
+    }
+}

@@ -1,0 +1,327 @@
+.mlv-page {
+    width: 100%;
+    min-height: calc(100vh - 160px);
+    background: linear-gradient(135deg, #ccdcfc 0%, #e8effe 50%, #f0f4ff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    padding-top: 100px;
+}
+
+.mlv-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 51, 146, 0.12);
+    padding: 40px;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+
+    @media (max-width: 600px) {
+        padding: 24px 20px;
+        border-radius: 16px;
+    }
+}
+
+.mlv-logo-section {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.mlv-logo-text {
+    font-family: quincy-cf, serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #003392;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.mlv-progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    padding: 0 10px;
+}
+
+.mlv-progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    min-width: 80px;
+
+    .mlv-progress-dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #ddd;
+        border: 2px solid #ddd;
+        transition: all 0.3s ease;
+    }
+
+    .mlv-progress-label {
+        font-family: proxima-nova, sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        color: #999;
+        text-align: center;
+        transition: color 0.3s ease;
+    }
+
+    &.active {
+        .mlv-progress-dot {
+            background: #003392;
+            border-color: #003392;
+            box-shadow: 0 0 0 3px rgba(0, 51, 146, 0.2);
+        }
+        .mlv-progress-label {
+            color: #003392;
+            font-weight: 600;
+        }
+    }
+}
+
+.mlv-progress-line {
+    flex: 1;
+    height: 2px;
+    background: #ddd;
+    margin: 0 4px;
+    margin-bottom: 20px;
+    max-width: 60px;
+}
+
+.mlv-step-container {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.mlv-title {
+    font-family: quincy-cf, serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #003392;
+    margin-bottom: 8px;
+    line-height: 1.2;
+
+    &.mlv-title-success {
+        color: #2e7d32;
+    }
+
+    &.mlv-title-error {
+        color: #f44336;
+    }
+}
+
+.mlv-subtitle {
+    font-family: proxima-nova, sans-serif;
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    
+    strong {
+        color: #003392;
+    }
+}
+
+.mlv-description {
+    font-family: proxima-nova, sans-serif;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 24px;
+    line-height: 1.5;
+
+    strong {
+        color: #003392;
+    }
+}
+
+.mlv-form {
+    text-align: left;
+    margin-top: 16px;
+}
+
+.mlv-input-group {
+    margin-bottom: 20px;
+}
+
+.mlv-label {
+    display: block;
+    font-family: proxima-nova, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.mlv-password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.mlv-input {
+    width: 100%;
+    height: 48px;
+    padding: 0 48px 0 16px;
+    border: 1.5px solid #ddd;
+    border-radius: 10px;
+    font-family: proxima-nova, sans-serif;
+    font-size: 15px;
+    color: #333;
+    background: #fafafa;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:focus {
+        outline: none;
+        border-color: #003392;
+        box-shadow: 0 0 0 3px rgba(0, 51, 146, 0.1);
+        background: #fff;
+    }
+
+    &::placeholder {
+        color: #aaa;
+    }
+}
+
+.mlv-eye-btn {
+    position: absolute !important;
+    right: 8px;
+    color: #888 !important;
+}
+
+.mlv-hint {
+    display: block;
+    font-family: proxima-nova, sans-serif;
+    font-size: 12px;
+    margin-top: 4px;
+    padding-left: 2px;
+
+    &.mlv-hint-error {
+        color: #f44336;
+    }
+
+    &.mlv-hint-success {
+        color: #4CAF50;
+    }
+}
+
+.mlv-submit-btn {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 24px;
+    background: #003392;
+    color: #ffffff;
+    font-family: proxima-nova, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+    margin-top: 8px;
+
+    &:hover {
+        background: #002270;
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    &:disabled {
+        background: #ccc;
+        color: #666;
+        cursor: not-allowed;
+
+        &:hover {
+            background: #ccc;
+        }
+    }
+}
+
+.mlv-secondary-btn {
+    width: 100%;
+    height: 44px;
+    border: 1.5px solid #003392;
+    border-radius: 24px;
+    background: transparent;
+    color: #003392;
+    font-family: proxima-nova, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 12px;
+
+    &:hover {
+        background: rgba(0, 51, 146, 0.04);
+    }
+}
+
+.mlv-success-icon-wrapper {
+    margin-bottom: 12px;
+    animation: mlv-bounce 0.6s ease;
+}
+
+@keyframes mlv-bounce {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.1); }
+    70% { transform: scale(0.95); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.mlv-success-box {
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+    border: 1px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.mlv-success-box-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+
+.mlv-success-duration {
+    font-family: quincy-cf, serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #2e7d32;
+    line-height: 1;
+}
+
+.mlv-success-label {
+    font-family: proxima-nova, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4CAF50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mlv-success-text {
+    font-family: proxima-nova, sans-serif;
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+
+    strong {
+        color: #2e7d32;
+    }
+}
+
+.mlv-action-buttons {
+    margin-top: 8px;
+}

@@ -1,0 +1,21 @@
+.dashboardContainer {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    position: fixed;
+
+    .teacherChart {
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+
+    .studentChart {
+        width: 50%;
+        height: 100%;
+        float: left;
+        max-height: 70%;
+        overflow-y: overlay;
+        margin-top: 50px;
+    }
+}

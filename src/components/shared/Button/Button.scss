@@ -1,0 +1,49 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/breakpoints';
+
+.ButtonContainer{
+  position: relative;
+}
+
+.Button {
+  background-color: $primary-p1;
+  border-radius: 4px;
+  padding: 9px 28px 9px 28px;
+  border: none;
+  outline: none;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  // -webkit-tap-highlight-color: transparent;
+  // transform: translateZ(0);
+  // box-shadow: 0 0 1px transparent;
+
+  &:hover {
+    text-decoration: none;
+    color: $neutral-n2;
+  }
+
+  &:focus {
+    text-decoration: none;
+    color: $neutral-n2;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.Overlay{
+  z-index: 2;
+  height: 100%;
+  width:100%;
+  opacity:0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.1);
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  &:hover{
+    opacity: 1;
+  }
+}

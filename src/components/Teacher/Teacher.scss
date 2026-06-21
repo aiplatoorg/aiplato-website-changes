@@ -1,0 +1,541 @@
+.container-fluid{
+    padding-left: 45px!important;
+    padding-right: 45px!important;
+}
+.rowHome {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inlineHeigth {
+    line-height: normal;
+}
+
+ul {
+    padding-inline-start: 16px;
+}
+
+.subHeader {
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.quattrocento-font {
+    font-family: proxima-nova, sans-serif;
+}
+
+.display-1 {
+    font-size: 7rem;
+    font-weight: 700 !important;
+}
+
+.mid-screen {
+    margin-top: -65px;
+}
+
+.teacherContentImg {
+    // text-align: center;
+    position: relative !important;
+    align-items: center;
+
+    img {
+        // max-height: 400px;
+        width: 100%;
+        // -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+        // -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+        // box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+    }
+
+}
+.QImage{
+    width: 27px;
+    height: 27px;
+    position: relative;
+    top: -10px;
+    left: 10px;
+}
+
+.tutorBanner {
+    display: flex;
+    flex-direction: column;   /* stack h3, h4, h6 vertically */
+    flex-wrap: nowrap;        /* no wrapping */
+    gap: 18px;                /* space between sections */
+
+    font-family: 'quincy-cf', serif;
+    padding-top: 40px;
+    color: #000000;
+    text-align: center;
+    align-items: center;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tutorBannerTitle {
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    font-size: clamp(26px, 2.7vw, 40px);
+    color: #0A0E13;
+}
+
+.tutorBannerTitleTop,
+.tutorBannerTitleBottom {
+    display: block;
+}
+
+.tutorBannerTitleBottom {
+    margin-top: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.stemWord {
+    color: #2F55D4;
+    font-weight: 700;
+}
+
+.tutorBannerTitleBottomRest {
+    color: #0A0E13;
+    font-weight: 500;
+}
+
+.stemBurst {
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    flex: 0 0 auto;
+    position: relative;
+    transform: translateY(-1px);
+}
+
+.stemBurst::before,
+.stemBurst::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 18px;
+    height: 2px;
+    background: #2F55D4;
+    border-radius: 2px;
+    transform-origin: center;
+}
+
+.stemBurst::before {
+    transform: translate(-50%, -50%) rotate(20deg);
+}
+
+.stemBurst::after {
+    transform: translate(-50%, -50%) rotate(-55deg);
+}
+
+.tutorBannerBox {
+    width: 100%;
+    max-width: 720px;
+}
+
+.tutorBannerBoxInner {
+    border-radius: 2px;
+    padding: 14px 18px;
+    background: transparent;
+}
+
+.tutorBannerSubtitle {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 400;
+    font-size: clamp(18px, 2.0vw, 26px);
+    line-height: 1.2;
+    color: #0A0E13;
+    margin-bottom: 8px;
+}
+
+.tutorBannerTagline {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 600;
+    font-size: clamp(12px, 1.4vw, 16px);
+    line-height: 1.2;
+    color: #0A0E13;
+    text-underline-offset: 3px;
+}
+
+.bulletsContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.bulletsContainer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    font-family: proxima-nova, sans-serif;
+    font-size: clamp(14px, 1.4vw, 18px);
+    font-weight: 400;
+    width: 100%;
+    max-width: 750px;
+    color: #737373;
+    text-align: left;
+}
+
+.cardList {
+    margin: 0;
+    padding-left: 1.2rem;
+    list-style-type: disc;
+
+    font-family: proxima-nova, sans-serif;
+    font-size: 17px !important;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #737373;
+}
+
+.cardList li + li {
+    margin-top: 6px;
+}
+
+.cardList-intro {
+    font-size: 17px !important;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #737373;
+    margin: 0 0 0.5rem 0;
+    // padding-left: 1.2rem;
+    font-family: proxima-nova, sans-serif;
+}
+
+.card4-capabilities strong {
+    color: #000;
+}
+
+.ferpa-footnote {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    font-family: proxima-nova, sans-serif;
+    font-style: italic;
+}
+
+.tutorBannerCtas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.calendlyButton {
+    padding: 0;
+    cursor: pointer;
+    border: 0;
+    background: #ccdcfc;
+    text-decoration: underline;
+    font-style: italic;
+    color: blue;
+}
+
+.topicText {
+    font-size: 20px;
+
+    li {
+        font-family: proxima-nova, sans-serif;
+    }
+
+    // padding-left: 5px;
+}
+
+@media (min-width: 1441px) {
+    .large-fontsize {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width: 990px) {
+    .mid-screen {
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .gradientBannerBg {
+        //  height: 180px;
+        height: 100%;
+        padding-bottom: 20px;
+    }
+
+    .tutorBanner {
+        padding-top: 28px;
+        gap: 14px;
+    }
+
+    .tutorBannerBoxInner {
+        padding: 12px 12px;
+    }
+}
+
+.tippy-content {
+    font-size: 16px !important;
+}
+
+.dot-animate::after {
+    content: '';
+    animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+    0% {
+        content: '';
+    }
+
+    33% {
+        content: '.';
+    }
+
+    66% {
+        content: '..';
+    }
+
+    100% {
+        content: '...';
+    }
+}
+
+.btnDarkBlueSpecial{
+  border-radius: 48px;
+  background: #fff;
+  width: auto!important;
+  color: #003392;
+  border: 2px solid #003392;
+
+  display: inline-flex;
+  padding: 9px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  font-family: proxima-nova, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+
+  &:hover{
+    text-decoration: none;
+    color: #0A0E13;
+    background: #D2E1FD;
+    border-color: #D2E1FD; /* same width, no jump */
+  }
+}
+/* Center the pill on the page */
+.aapt-pill-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* Pill styles matching Figma */
+.aapt-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 261px;
+  height: 49px;
+  padding: 10px;
+  gap: 10px;
+
+  border-radius: 12px;
+  border: 1px solid #4252AF;
+  background-color: rgba(66, 82, 175, 0.10);
+
+  color: #4252AF;
+  font-family: proxima-nova, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: center;
+}
+
+// APS 2026 callout box
+.aps-section-box {
+  border-radius: 22px;
+  border: 1px solid #D2E1FD;
+  background: #F6F8FF;
+  padding: 28px 24px 24px;
+  margin: 50px 0 0;
+}
+
+.aps-section-title {
+  font-family: quincy-cf, serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #4252AF;
+  margin-bottom: 12px;
+}
+
+.aps-section-text {
+  margin: 4px 0;
+  font-family: proxima-nova, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #2D3436;
+}
+
+.aps-section-link {
+  color: #4252AF;
+  text-decoration: underline;
+  font-weight: 500;
+
+  &:hover {
+    color: #26337f;
+  }
+}
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* EXACT spacing between cards */
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.bannerTitlespecial{
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+    line-height: 1.15;
+    font-size: 28px;
+    font-family: 'quincy-cf', serif;
+    color: #0A0E13;
+}
+
+.card-box {
+  border: 1px solid rgba(66, 82, 175, 0.12);
+  padding: 30px !important;
+  border-radius: 22px;
+  background-color: #fff;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(66, 82, 175, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.8) inset;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    border-color: rgba(66, 82, 175, 0.2);
+    box-shadow:
+      0 4px 8px rgba(0, 0, 0, 0.06),
+      0 16px 40px rgba(66, 82, 175, 0.12),
+      0 1px 0 rgba(255, 255, 255, 0.9) inset;
+  }
+}
+
+// Card 4: main image with overlay image at bottom-right
+.card4-image-wrap {
+  position: relative;
+  display: inline-block;
+  width: 98%;
+
+  .card4-image-main {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .card4-image-overlay {
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    width: 28%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    border: 2px solid black;
+  }
+  
+}
+
+@media (max-width: 767px) {
+  .card4-image-wrap .card4-image-overlay {
+    width: 25%;
+    height: auto;
+    bottom: -10px;
+    right: -10px;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 550px) {
+  .card4-image-wrap .card4-image-overlay {
+    width: 25%;
+    height: auto;
+    bottom: 0px;
+    right: -10px;
+    border-radius: 4px;
+  }
+}
+// Make teacher cards stack nicely on smaller screens
+@media (max-width: 991.98px) {
+  .card-box > div {
+    flex-direction: column !important;
+    align-items: flex-start;
+  }
+
+  .card-box .accImg {
+    width: 100%;
+  }
+
+  .card-box .bannerTitlespecial,
+  .card-box .copyText {
+    text-align: left;
+  }
+}
+
+// Educator quote box (box-educator bg + quotation mark)
+.educator-quote-box {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 200px;
+
+  .educator-quote-icon {
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    width: 30px;
+    height: auto;
+    z-index: 1;
+  }
+
+  .educator-quote-text {
+    padding-top: 28px;
+    padding-left: 8px;
+    padding-bottom: 0;
+    font-weight: 400;
+    color: #0A0E13;
+    line-height: 1.5;
+  }
+}
+
+// On tablets/mobile, remove background image and use solid light box instead
+@media (max-width: 991.98px) {
+  .educator-quote-box {
+    background-image: none !important;
+    background-color: #F6F8F9;
+    border-radius: 12px;
+  }
+}

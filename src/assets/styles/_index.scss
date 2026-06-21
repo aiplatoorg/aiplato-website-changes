@@ -1,0 +1,16 @@
+@import './_typography';
+@import './styles';
+@import 'node_modules/bootstrap/scss/bootstrap-grid';
+@import './variables';
+
+li.active{
+    background-color: $primary-p1 !important;
+}
+
+.carousel-inner{
+    border-radius: 10px;
+}
+
+.carousel-caption{
+    bottom: auto !important;
+}

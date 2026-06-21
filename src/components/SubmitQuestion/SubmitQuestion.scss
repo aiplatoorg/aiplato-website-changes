@@ -1,0 +1,173 @@
+.enter-code-box {
+    input {
+      position: relative;
+      z-index: 1;
+      // width: 260px;
+      box-shadow: none;
+      border: 1px solid #ced4da !important;
+    }
+    p {
+      margin-bottom: 5px;
+    }
+  }
+  
+  .physics-img {
+    position: absolute;
+    right: 0px;
+    top: -74px;
+    z-index: 0;
+  }
+  
+  .submit-question {
+    // background: url(../../assets/images/bgImg-submit-question.png) no-repeat 0 -35px;
+    // background-size: cover;
+    height: 100%;
+    textarea {
+      border-color: #e2e2e2;
+      // -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.2);
+      // -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.2);
+      // box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.2);
+    }
+  }
+  .whiteBG {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 3px 4px 36px 0px #b9b7af47;
+    -moz-box-shadow: 3px 4px 36px 0px #b9b7af47;
+    box-shadow: 3px 4px 36px 0px #b9b7af47;
+  }
+  .submitBtn {
+    width: 100%;
+    text-align: right;
+    button {
+      width: auto;
+    }
+  }
+  .submittedBtn {
+    width: 100%;
+    text-align: right;
+  
+    p {
+      padding: 10px 15px;
+      background-color: #aef9ac;
+      border-radius: 5px;
+      width: fit-content;
+      margin: 0;
+      text-align: center;
+      float: right;
+    }
+  }
+  
+  .voteToggle {
+    .MuiToggleButton-root {
+      border: 0 !important;
+  
+      &.Mui-selected {
+        background-color: rgba(0, 0, 0, 0) !important;
+      }
+    }
+  }
+  .homecontmpad {
+    padding-bottom: 50px;
+  }
+  .bg-blue-header {
+    background-color: #164b99;
+  }
+  .que-top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 55px;
+  }
+  .logo-img {
+    max-width: 160px;
+  }
+  .bdrDtted {
+    border-top: 2px dotted #e1ddd3;
+  }
+  
+  .btn-viewAll {
+    background: #fff1cf;
+    border: 1px solid #f3bf46;
+    padding: 10px 15px;
+    border-radius: 5px;
+    &:hover {
+      background: #e4a301;
+      color: #fff;
+    }
+  }
+  
+  .MuiSelect-outlined {
+    border: 0;
+  }
+  
+  .prevSessionList {
+    text-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    span {
+      font-size: 16px;
+    }
+    .selectSessionOptions {
+      box-shadow: 0 0px 0px 0 rgba(32, 33, 36, 0);
+      background-color: #164b99 !important;
+      height: 48px !important;
+      border-color: transparent !important;
+      color: white !important;
+      // max-width: 100px;
+      padding: 0;
+    }
+  }
+  .themeTitle{
+    font-size: 24px;
+    color: #164b99;
+    margin-bottom: 5px;
+    font-weight: 300;
+  }
+  .uniLogo{
+    max-height: 60px;
+    max-width: 150px;
+    width: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    .secpad {
+      padding: 0;
+    }
+    .submit-question {
+      // background: url(../../assets/images/bgImg-submit-question.png) no-repeat 0 -5px;
+      // background-size: cover;
+      height: 200px;
+    }
+    .submitBtn {
+      text-align: left;
+      button {
+        width: 100%;
+      }
+    }
+    .submittedBtn {
+      p {
+        width: 100%;
+      }
+    }
+    .prevSessionList {
+      max-width: 250px;
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .prevSessionList {
+      max-width: 210px;
+    }
+    .logo-img {
+      max-width: 120px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .physics-img {
+      top: -34px;
+      width: 200px;
+    }
+  }

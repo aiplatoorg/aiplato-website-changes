@@ -1,0 +1,149 @@
+.right-video {
+  // padding: 10px;
+  // stroke-width: 1;
+  // background-image: url(/static/media/Rectangle.eb1b1d94.svg);
+  // background-repeat: round;
+  // margin-top: 15px;
+  // background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 0px solid #ccc;
+  //margin-top: 15px;
+
+  label {
+    font-size: 18px;
+    padding: 15px 0 10px;
+    font-weight: 500;
+    line-height: 1.3em;
+    color: #303030;
+  }
+
+  .sampleDataContainer {
+    width: 100%;
+    font-size: 10px;
+    text-align: right;
+    margin-top: 10px;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    display: none;
+  }
+
+  .carouselCol {
+    padding: 0 2px;
+    cursor: pointer;
+
+    img {
+      border-radius: 10px;
+      height: 80px;
+    }
+
+
+  }
+
+  .borderright {
+    border-right: 1px solid #ccc;
+    height: 160px;
+  }
+
+  .carousel-item {
+    background: transparent;
+    background: #fff !important;
+  }
+
+  //   .carousel {
+  .carousel-indicators {
+    left: 0;
+    margin: 0;
+    top: 50%;
+    position: absolute;
+    height: 18px;
+    z-index: 0;
+
+    li {
+      background: transparent !important;
+      background: #fff !important;
+      background-color: #fff !important;
+      border-radius: 50%;
+      width: 11px;
+      height: 18px;
+      position: absolute;
+      right: -15px;
+      cursor: pointer;
+
+      &::before {
+        position: absolute;
+        top: -10px;
+        left: 0;
+        display: inline-block;
+        width: 100%;
+        height: 10px;
+        content: "";
+      }
+
+      &::after {
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        display: inline-block;
+        width: 100%;
+        height: 10px;
+        content: "";
+      }
+
+      &:first-child {
+        left: -15px;
+      }
+
+      div {
+        position: absolute;
+        top: 0;
+        margin: 0;
+        height: 17px;
+        width: 11px;
+        background-size: 100% 100%;
+
+        &.left {
+          background-image: url(../../assets/images/icon_left_arrow.svg);
+          right: 25px;
+          transform: rotate(360deg);
+        }
+
+        &.right {
+          background-image: url(../../assets/images/icon_right_arrow.svg);
+          right: 25px;
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+    .active {
+      background: transparent;
+    }
+  }
+
+  .carousel-container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  //   }
+}
+
+.studentBox {
+  // width: 230px;
+  height: 270px;
+  border-radius: 20px;
+  padding: 15px 10px 10px 10px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+  // width:"250px", paddingRight:'15px', paddingRight:'10px', height:'200px', textAlign:'center'
+  color: #000000;
+
+  p {
+    font-size: 16px;
+  }
+}

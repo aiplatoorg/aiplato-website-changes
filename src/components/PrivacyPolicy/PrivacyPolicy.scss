@@ -1,0 +1,66 @@
+.bumpedfont15 {
+    font-weight: bold;
+    color: #000000;
+    font-size: 20pt
+}
+
+.bumpedfont12 {
+    font-weight: bold;
+    color: #000000;
+    font-size: 12pt
+}
+
+.bumpedfont12italic {
+    font-weight: bold;
+    color: #000000;
+    font-size: 12pt;
+    font-style: italic;
+}
+
+.bumpedfont15normal {
+    font-weight: normal;
+    color: #000000;
+}
+
+.bumpedfont15normalItalic {
+    font-weight: normal;
+    color: #000000;
+    font-style: italic;
+}
+
+.s5 {
+    margin-top: 5pt;
+    margin-bottom: 5pt;
+    line-height: normal;
+    font-size: 12pt
+}
+
+.ptag {
+
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+    text-align: justify;
+    line-height: 16.2pt
+}
+
+.marginleft20 {
+    margin-left: 20px;
+}
+
+.marginleft5 {
+    margin-left: 5px;
+}
+
+.marginright5 {
+    margin-right: 5px;
+}
+
+.underlinec {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    .containerpp {
+        width: 95% !important;
+    }
+}

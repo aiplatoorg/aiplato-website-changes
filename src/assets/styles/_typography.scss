@@ -1,0 +1,233 @@
+@import '../styles/variables';
+@import './breakpoints';
+
+@font-face {
+	font-family: CircularStd-Medium;
+	src: url('../fonts/CircularStd-Medium.ttf');
+}
+
+@font-face {
+	font-family: Lato-Medium;
+	src: url('../fonts//Lato-Medium.ttf');
+}
+
+@font-face {
+	font-family: Lato-Regular;
+	src: url('../fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+	font-family: LatoSemibold;
+	src: url('../fonts/LatoSemibold.ttf');
+}
+
+@font-face {
+	font-family: CircularStd-Book;
+	src: url('../fonts/CircularStd-Book.ttf');
+}
+
+@font-face {
+	font-family: CircularStd-Bold;
+	src: url('../fonts/CircularStd-Bold.ttf');
+}
+
+
+.Font_Large {
+	font-family: "CircularStd-Bold",sans-seriff ;
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 1.07;
+	letter-spacing: -0.2px;
+	color: $neutral-n1;
+	@include mq-generator($large-screen){
+		font-size: 60px;
+	}
+	@include mq-generator($screen-tablet-portrait){
+		font-size: 48px;
+	}
+	@include mq-generator($screen-tablet-small){
+		font-size: 48px;
+	}
+
+}
+
+.Font_Hero {
+	font-family: "CircularStd-Bold",sans-seriff ;
+	font-size: 25px;
+	font-weight: bold;
+	line-height: 1.07;
+	letter-spacing: -0.2px;
+	color: $neutral-n1;
+	@include mq-generator($large-screen){
+		font-size: 60px;
+	}
+	@include mq-generator($screen-tablet-portrait){
+		font-size: 48px;
+	}
+	@include mq-generator($screen-tablet-small){
+		font-size: 48px;
+	}
+
+}
+
+.Font_H1 {
+	font-family: "CircularStd-Bold",sans-seriff ;
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 1.07;
+	letter-spacing: -0.2px;
+	color: $neutral-n1;
+	@include mq-generator($screen-tablet-portrait){
+		font-size: 32px;
+	}
+	@include mq-generator($large-screen){
+		font-size: 60px;
+	}
+}
+
+.Font_H2 {
+	font-family: "CircularStd-Bold",sans-seriff;
+	font-size: 16px;
+	//font-weight: 500;
+	line-height: 1.13;
+	color: $neutral-n3;
+	@include mq-generator($large-screen){
+		font-size: 32px;
+	}
+	@include mq-generator($screen-tablet-portrait){
+		font-size: 24px;
+	}
+	@include mq-generator($screen-tablet-small){
+		font-size: 24px;
+	}
+
+}
+
+.Font_H12 {
+	font-family: "CircularStd-Bold",sans-seriff;
+	font-size: 24px;
+	//font-weight: 500;
+	line-height: 1.13;
+	color: $neutral-n3;
+	@include mq-generator($large-screen){
+		font-size: 32px;
+	}
+
+}
+
+.Font_H2_Black {
+	font-family: "CircularStd-Bold",sans-seriff;
+	font-size: 18px;
+	//font-weight: 500;
+	line-height: 1.13;
+	color: $neutral-n1;
+	@include mq-generator($large-screen){
+		font-size: 32px;
+	}
+	@include mq-generator($screen-tablet-portrait){
+		font-size: 25px;
+	}
+	@include mq-generator($screen-tablet-small){
+		font-size: 25px;
+	}
+
+}
+
+.Font_H3 {
+	font-family: "CircularStd-Book",sans-seriff;
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 0.18px;
+	color: $neutral-n3;
+	@include mq-generator($large-screen){
+		font-size: 24px;
+	}
+	@include mq-generator($screen-tablet-portrait){
+		font-size: 20px;
+	}
+	@include mq-generator($screen-tablet-small){
+		font-size: 20px;
+	}
+}
+
+.Font_H4 {
+	font-family: "CircularStd-Book",sans-seriff;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.33;
+	letter-spacing: 0.14px;
+	color: $neutral-n3;
+	@include mq-generator($large-screen){
+		font-size: 32px;
+	}
+	@include mq-generator($screen-tablet-portrait){
+		font-size: 25px;
+	}
+	@include mq-generator($screen-tablet-small){
+		font-size: 25px;
+	}
+}
+
+.Font_H5 {
+	font-family: "CircularStd-Medium",sans-seriff;
+	font-size: 18px;
+	line-height: 1.42;
+	letter-spacing: 0.6px;
+	color: $neutral-n3;
+	@include mq-generator($screen-type-small-and-up){
+		font-size: 24px;
+	}
+	
+}
+
+.Font_H6 {
+	font-family: "Lato-Regular";
+	font-size: 14px;
+	line-height: 1.25;
+	letter-spacing: 0.5px;
+	color: $neutral-n2;
+}
+
+.Font_H7 {
+	font-family: "Lato-Regular",sans-seriff;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.33;
+	letter-spacing: 0.14px;
+	color: $neutral-n2;
+}
+
+.Font_H8 {
+	font-family: "LatoSemibold",sans-seriff;
+	font-size: 16px;
+	letter-spacing: 0.14px;
+	text-align: center;
+	color: $neutral-n2;
+}
+
+.Font_H9 {
+	font-family: "Lato-Regular",sans-seriff;
+	font-size: 16px;
+	letter-spacing: 0.12px;
+	color: $neutral-n2;
+}
+
+.Font_H10{
+	font-family: "Lato-Regular",sans-seriff;
+	font-size: 12px;
+	letter-spacing: 0.12px;
+	color: $neutral-n6;
+}
+
+.Font_H11{
+	font-family: "CircularStd-Book",sans-seriff;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.33;
+	letter-spacing: 0.14px;
+	color: $neutral-n6;
+	@include mq-generator($screen-type-small-and-up){
+		font-size: 32px;
+	}
+}
+
