@@ -984,6 +984,17 @@ class Home extends Component {
                                 </div>
                     </div>
 
+                    {/* aiPlato is expanding — coming-soon subjects */}
+                    <div className="mkComingStrip">
+                        <p>aiPlato is expanding. Stay tuned for AI Teaching Assistants in:</p>
+                        <div className="mk-subjects">
+                            <div className="mk-subject-pill">📐 Pre-Calculus</div>
+                            <div className="mk-subject-pill">∫ Calculus</div>
+                            <div className="mk-subject-pill">⚗️ Chemistry</div>
+                            <div className="mk-subject-pill">More coming…</div>
+                        </div>
+                    </div>
+
                     <div className='mainContainerWrapper'>
                         <div className='py-3 '>
                                     <div className='' >

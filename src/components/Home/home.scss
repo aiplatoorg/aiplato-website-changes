@@ -2048,3 +2048,39 @@ div[class*="Carousel__RailWrapper"] {
         .mk-policy-grid { grid-template-columns: 1fr; }
     }
 }
+
+/* ── "aiPlato is expanding" coming-soon strip (ported from mockup) ───── */
+.mkComingStrip {
+    width: 100%;
+    align-self: stretch;
+    background: linear-gradient(90deg, #fef9c3, #fef3c7);
+    border-top: 2px solid #fde68a;
+    border-bottom: 2px solid #fde68a;
+    padding: 26px 48px;
+    text-align: center;
+    font-family: proxima-nova, sans-serif;
+
+    p {
+        font-size: 15px;
+        color: #92400e;
+        font-weight: 600;
+        margin-bottom: 14px;
+    }
+
+    .mk-subjects {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .mk-subject-pill {
+        background: #fff;
+        border: 1.5px solid #fde68a;
+        color: #92400e;
+        border-radius: 20px;
+        padding: 7px 20px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+}
