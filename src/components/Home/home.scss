@@ -1971,9 +1971,80 @@ div[class*="Carousel__RailWrapper"] {
         }
     }
 
+    /* Comparison table */
+    .mk-compare-section { background: #f8f9ff; }
+
+    .mk-comp-label {
+        margin-bottom: 16px;
+
+        strong { color: #0c1a41; font-size: 16px; }
+        span { font-size: 13px; color: #5f6570; }
+    }
+
+    .mk-comp-table-wrap { overflow-x: auto; }
+
+    .mk-comp-table {
+        width: 100%;
+        min-width: 640px;
+        border-collapse: collapse;
+        font-size: 14px;
+
+        th {
+            padding: 14px 20px;
+            text-align: left;
+            font-size: 13px;
+            font-weight: 700;
+            border-bottom: 2px solid #e2e8f0;
+            color: #0c1a41;
+            background: #fff;
+
+            &.mk-hl { background: #ebeeff; color: #003392; }
+        }
+
+        td {
+            padding: 13px 20px;
+            border-bottom: 1px solid #f1f5f9;
+            color: #374151;
+            background: #fff;
+
+            &.mk-hl { background: #f0f7ff; font-weight: 600; color: #0c1a41; }
+        }
+
+        tr:last-child td { border-bottom: none; }
+    }
+
+    .mk-chk { color: #398554; font-weight: 700; font-size: 16px; }
+    .mk-crs { color: #cbd5e1; font-size: 16px; }
+    .mk-prt { color: #f59e0b; font-size: 13px; font-weight: 600; }
+
+    /* Institutional AI Policy */
+    .mk-policy-section { background: #fff; }
+
+    .mk-policy-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-top: 40px;
+    }
+
+    .mk-policy-card {
+        background: #fff;
+        border-radius: 22px;
+        padding: 28px;
+        border: 1.5px solid #e2e8f0;
+        display: flex;
+        gap: 18px;
+        text-align: left;
+
+        .mk-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+        h4 { font-size: 16px; font-weight: 700; color: #0c1a41; margin-bottom: 8px; }
+        p { font-size: 14px; color: #5f6570; line-height: 1.6; margin-bottom: 0; }
+    }
+
     @media (max-width: 900px) {
         .mk-section { padding: 56px 24px; }
         .mk-section-title { font-size: 28px; }
         .mk-three-col { grid-template-columns: 1fr; }
+        .mk-policy-grid { grid-template-columns: 1fr; }
     }
 }
