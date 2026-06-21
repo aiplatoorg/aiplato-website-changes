@@ -747,6 +747,58 @@ class Home extends Component {
                         </div>
                     </div>
 
+                    {/* Blue Section Outside the main container in full width */}
+                    <div className='py-3 bg-blue2' style={{ overflow: 'visible', paddingBottom: '40px' , width:"100%" , display:"flex" , justifyContent:"center", alignItems:"center"}}>
+                        <div className='mainContainerWrapper' id='studentsContainer'>
+                                <Row style={{margin:0}}>
+                                    <Col sm={12} style={{padding:0}}>
+                                        <div className='trusted-institutions-card'>
+                                            <Row>
+                                                <Col sm={12} className='text-center'>
+                                                    <h1 className='bannerTitle2 pb-2 text-white'>Game-Changing Learning Impact</h1>
+                                                </Col>
+                                            </Row>
+                                            
+                                            <div className='research-impact-column'>
+                                                <div className='research-highlight'>
+                                                    <h3 className='university-name'>University of Texas at Arlington Study</h3>
+                                                    <p className='research-group'>Independent study by Physics Education Research Group at University of Texas Arlington shows that students who did homework on aiPlato scored <span className='highlight-number'>13.9 points </span> higher on their three-hour 100-point cumulative Final Exam (effect size = 0.8).</p>
+                                                    <div className='hide-mobile'>
+                                                        <button onClick={this.downloadStudyPdf} className="btnDarkBlue-white">
+                                                            Published Copy on arXiv
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div className='research-stats-cards'>
+                                                    <div className='research-stat-card research-stat-card--one'>
+                                                        <img src={statCardIcon1} alt='' className='research-stat-icon' />
+                                                        <div className='research-stat-value'>+13.9 pts</div>
+                                                        <div className='research-stat-label'>Exam Score Gain</div>
+                                                        <p className='research-stat-detail'>Cumulative 3-hr Final Exam<br />University of Texas, Arl. PER</p>
+                                                    </div>
+                                                    <div className='research-stat-card research-stat-card--two'>
+                                                        <img src={statCardIcon2} alt='' className='research-stat-icon' />
+                                                        <div className='research-stat-value research-stat-value--effect'>
+                                                            <em className='research-stat-effect-d'>d</em>
+                                                            <span className='research-stat-effect-rest'>= 0.81</span>
+                                                        </div>
+                                                        <div className='research-stat-label'>Effect Size</div>
+                                                        <a href='https://arxiv.org/abs/2601.09965' target='_blank' rel='noopener noreferrer' className='research-stat-link'>https://arxiv.org/abs/2601.09965</a>
+                                                    </div>
+                                                    <div className='research-stat-card research-stat-card--three'>
+                                                        <img src={statCardIcon3} alt='' className='research-stat-icon' />
+                                                        <div className='research-stat-value'>~99%</div>
+                                                        <div className='research-stat-label'>Auto-grade Accuracy</div>
+                                                        <a href='https://openai.com/index/gpt-4-research/' target='_blank' rel='noopener noreferrer' className='research-stat-detail research-stat-link'>vs. GPT-4’s 64% on AP Physics (source: OpenAI)</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                </Row>
+                        </div>
+                    </div>
+
                     {/* ===== Ported from mockup: Rethinking + One Platform/Three Products ===== */}
                     <div className="mockupSections">
                         {/* Rethinking Education for the Age of AI */}
@@ -820,58 +872,6 @@ class Home extends Component {
                                 </div>
                             </div>
                         </section>
-                    </div>
-
-                    {/* Blue Section Outside the main container in full width */}
-                    <div className='py-3 bg-blue2' style={{ overflow: 'visible', paddingBottom: '40px' , width:"100%" , display:"flex" , justifyContent:"center", alignItems:"center"}}>
-                        <div className='mainContainerWrapper' id='studentsContainer'>
-                                <Row style={{margin:0}}>
-                                    <Col sm={12} style={{padding:0}}>
-                                        <div className='trusted-institutions-card'>
-                                            <Row>
-                                                <Col sm={12} className='text-center'>
-                                                    <h1 className='bannerTitle2 pb-2 text-white'>Game-Changing Learning Impact</h1>
-                                                </Col>
-                                            </Row>
-                                            
-                                            <div className='research-impact-column'>
-                                                <div className='research-highlight'>
-                                                    <h3 className='university-name'>University of Texas at Arlington Study</h3>
-                                                    <p className='research-group'>Independent study by Physics Education Research Group at University of Texas Arlington shows that students who did homework on aiPlato scored <span className='highlight-number'>13.9 points </span> higher on their three-hour 100-point cumulative Final Exam (effect size = 0.8).</p>
-                                                    <div className='hide-mobile'>
-                                                        <button onClick={this.downloadStudyPdf} className="btnDarkBlue-white">
-                                                            Published Copy on arXiv
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div className='research-stats-cards'>
-                                                    <div className='research-stat-card research-stat-card--one'>
-                                                        <img src={statCardIcon1} alt='' className='research-stat-icon' />
-                                                        <div className='research-stat-value'>+13.9 pts</div>
-                                                        <div className='research-stat-label'>Exam Score Gain</div>
-                                                        <p className='research-stat-detail'>Cumulative 3-hr Final Exam<br />University of Texas, Arl. PER</p>
-                                                    </div>
-                                                    <div className='research-stat-card research-stat-card--two'>
-                                                        <img src={statCardIcon2} alt='' className='research-stat-icon' />
-                                                        <div className='research-stat-value research-stat-value--effect'>
-                                                            <em className='research-stat-effect-d'>d</em>
-                                                            <span className='research-stat-effect-rest'>= 0.81</span>
-                                                        </div>
-                                                        <div className='research-stat-label'>Effect Size</div>
-                                                        <a href='https://arxiv.org/abs/2601.09965' target='_blank' rel='noopener noreferrer' className='research-stat-link'>https://arxiv.org/abs/2601.09965</a>
-                                                    </div>
-                                                    <div className='research-stat-card research-stat-card--three'>
-                                                        <img src={statCardIcon3} alt='' className='research-stat-icon' />
-                                                        <div className='research-stat-value'>~99%</div>
-                                                        <div className='research-stat-label'>Auto-grade Accuracy</div>
-                                                        <a href='https://openai.com/index/gpt-4-research/' target='_blank' rel='noopener noreferrer' className='research-stat-detail research-stat-link'>vs. GPT-4’s 64% on AP Physics (source: OpenAI)</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Col>
-                                </Row>
-                        </div>
                     </div>
 
                     <div className='mainContainerWrapper'>
