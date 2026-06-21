@@ -126,6 +126,8 @@ class Navigation extends Component {
                       <a href={`${process.env.PUBLIC_URL}/#prod-homework`} onClick={this.scrollToHome('prod-homework')} className="app-nav-dropdown-item">📚 Homework Platform</a>
                       <a href={`${process.env.PUBLIC_URL}/#prod-testprep`} onClick={this.scrollToHome('prod-testprep')} className="app-nav-dropdown-item">🎯 Test Prep AI</a>
                       <a href={`${process.env.PUBLIC_URL}/#prod-courses`} onClick={this.scrollToHome('prod-courses')} className="app-nav-dropdown-item">🎓 Independent Courses</a>
+                      <div className="app-nav-dropdown-divider" />
+                      <a href={`${process.env.PUBLIC_URL}/#compare-platforms`} onClick={this.scrollToHome('compare-platforms')} className="app-nav-dropdown-item app-nav-dropdown-item--muted">↗ Compare Platforms</a>
                     </div>
                   </div>
 
@@ -167,6 +169,7 @@ class Navigation extends Component {
                 <a href={`${process.env.PUBLIC_URL}/#prod-homework`} onClick={this.scrollToHome('prod-homework')} className="nav-link app-mobile-subitem">📚 Homework Platform</a>
                 <a href={`${process.env.PUBLIC_URL}/#prod-testprep`} onClick={this.scrollToHome('prod-testprep')} className="nav-link app-mobile-subitem">🎯 Test Prep AI</a>
                 <a href={`${process.env.PUBLIC_URL}/#prod-courses`} onClick={this.scrollToHome('prod-courses')} className="nav-link app-mobile-subitem">🎓 Independent Courses</a>
+                <a href={`${process.env.PUBLIC_URL}/#compare-platforms`} onClick={this.scrollToHome('compare-platforms')} className="nav-link app-mobile-subitem">↗ Compare Platforms</a>
 
                 <Hyperlink onLinkClick={this.onMenuItemSelection} type="Link_Primary" className="nav-item" href="/educator">Educators</Hyperlink>
 

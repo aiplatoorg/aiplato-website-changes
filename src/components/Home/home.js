@@ -87,6 +87,7 @@ class Home extends Component {
     state = {
         email: '',
         password: '',
+        activeCompareTab: 0,
         validIds: [],
         showPassword: false,
         shoowearlyaccess: true,
@@ -874,51 +875,102 @@ class Home extends Component {
                         </section>
 
                         {/* Comparison vs legacy platforms */}
-                        <section className="mk-section mk-compare-section">
+                        <section className="mk-section mk-compare-section" id="compare-platforms">
                             <div className="mk-section-inner">
                                 <span className="mk-section-tag">Why Switch</span>
                                 <h2 className="mk-section-title">Why Institutions Are Switching to aiPlato</h2>
                                 <p className="mk-section-body">The only platform with ~99% free-response accuracy, peer-reviewed learning outcomes, and a complete teaching-intelligence layer built from real educator interactions.</p>
-                                <div className="mk-comp-label"><strong>📚 Homework Platform</strong> <span>— aiPlato vs. WebAssign / Pearson MyLab / WileyPLUS / Cengage</span></div>
-                                <div className="mk-comp-table-wrap">
-                                    <table className="mk-comp-table">
-                                        <thead>
-                                            <tr>
-                                                <th style={{ width: '32%' }}>Feature</th>
-                                                <th className="mk-hl" style={{ width: '22%' }}>✦ aiPlato</th>
-                                                <th style={{ width: '23%' }}>WebAssign / Pearson</th>
-                                                <th style={{ width: '23%' }}>ExpertTA / Wiley</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr><td>Free-response auto-grading (equations)</td><td className="mk-hl"><span className="mk-chk">✓</span> ~99% accuracy</td><td><span className="mk-prt">⚡ Limited / MCQ focus</span></td><td><span className="mk-prt">⚡ Partial</span></td></tr>
-                                            <tr><td>Step-level root-cause feedback</td><td className="mk-hl"><span className="mk-chk">✓</span> Identifies exact error step</td><td><span className="mk-crs">✕</span></td><td><span className="mk-crs">✕</span></td></tr>
-                                            <tr><td>Diagram + handwriting input</td><td className="mk-hl"><span className="mk-chk">✓</span> Stylus / scan / keyboard</td><td><span className="mk-crs">✕</span></td><td><span className="mk-crs">✕</span></td></tr>
-                                            <tr><td>Micro-concept proficiency map</td><td className="mk-hl"><span className="mk-chk">✓</span> 800+ concepts</td><td><span className="mk-crs">✕</span></td><td><span className="mk-crs">✕</span></td></tr>
-                                            <tr><td>24/7 AI Teaching Assistant</td><td className="mk-hl"><span className="mk-chk">✓</span> Interactive, personalized</td><td><span className="mk-crs">✕</span></td><td><span className="mk-prt">⚡ Basic hints only</span></td></tr>
-                                            <tr><td>TA workload reduction</td><td className="mk-hl"><span className="mk-chk">✓</span> 70–80% offloaded</td><td><span className="mk-crs">✕</span></td><td><span className="mk-crs">✕</span></td></tr>
-                                            <tr><td>Instructor AI interaction visibility</td><td className="mk-hl"><span className="mk-chk">✓</span> Full audit log</td><td><span className="mk-crs">✕</span></td><td><span className="mk-crs">✕</span></td></tr>
-                                            <tr><td>Peer-reviewed learning impact</td><td className="mk-hl"><span className="mk-chk">✓</span> +13.9 pts (arXiv)</td><td><span className="mk-crs">✕</span></td><td><span className="mk-crs">✕</span></td></tr>
-                                        </tbody>
-                                    </table>
+                                <div className="mk-comp-tabs">
+                                    <button type="button" className={this.state.activeCompareTab === 0 ? "mk-comp-tab mk-comp-tab--active" : "mk-comp-tab"} onClick={() => this.setState({ activeCompareTab: 0 })}>📚 Homework Platform</button>
+                                    <button type="button" className={this.state.activeCompareTab === 1 ? "mk-comp-tab mk-comp-tab--active" : "mk-comp-tab"} onClick={() => this.setState({ activeCompareTab: 1 })}>🎯 Test Prep AI</button>
+                                    <button type="button" className={this.state.activeCompareTab === 2 ? "mk-comp-tab mk-comp-tab--active" : "mk-comp-tab"} onClick={() => this.setState({ activeCompareTab: 2 })}>🎓 Independent Courses</button>
                                 </div>
+
+                                {this.state.activeCompareTab === 0 &&
+                                    <>
+                                        <div className="mk-comp-label"><strong>📚 Homework Platform</strong> <span>— aiPlato vs. WebAssign / Pearson MyLab / WileyPLUS / Cengage</span></div>
+                                        <div className="mk-comp-table-wrap">
+                                            <table className="mk-comp-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th style={{ width: '32%' }}>Feature</th>
+                                                        <th className="mk-hl" style={{ width: '22%' }}>✦ aiPlato</th>
+                                                        <th style={{ width: '23%' }}>WebAssign / Pearson</th>
+                                                        <th style={{ width: '23%' }}>ExpertTA / Wiley</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td>Free-response auto-grading (equations)</td><td className="mk-hl"><span className="mk-chk">✓</span> ~99% accuracy</td><td><span className="mk-prt">⚡ Limited / MCQ focus</span></td><td><span className="mk-prt">⚡ Partial</span></td></tr>
+                                                    <tr><td>Step-level root-cause feedback</td><td className="mk-hl"><span className="mk-chk">✓</span> Identifies exact error step</td><td><span className="mk-crs">✕</span></td><td><span className="mk-crs">✕</span></td></tr>
+                                                    <tr><td>Diagram + handwriting input</td><td className="mk-hl"><span className="mk-chk">✓</span> Stylus / scan / keyboard</td><td><span className="mk-crs">✕</span></td><td><span className="mk-crs">✕</span></td></tr>
+                                                    <tr><td>Micro-concept proficiency map</td><td className="mk-hl"><span className="mk-chk">✓</span> 800+ concepts</td><td><span className="mk-crs">✕</span></td><td><span className="mk-crs">✕</span></td></tr>
+                                                    <tr><td>24/7 AI Teaching Assistant</td><td className="mk-hl"><span className="mk-chk">✓</span> Interactive, personalized</td><td><span className="mk-crs">✕</span></td><td><span className="mk-prt">⚡ Basic hints only</span></td></tr>
+                                                    <tr><td>TA workload reduction</td><td className="mk-hl"><span className="mk-chk">✓</span> 70–80% offloaded</td><td><span className="mk-crs">✕</span></td><td><span className="mk-crs">✕</span></td></tr>
+                                                    <tr><td>Instructor AI interaction visibility</td><td className="mk-hl"><span className="mk-chk">✓</span> Full audit log</td><td><span className="mk-crs">✕</span></td><td><span className="mk-crs">✕</span></td></tr>
+                                                    <tr><td>Peer-reviewed learning impact</td><td className="mk-hl"><span className="mk-chk">✓</span> +13.9 pts (arXiv)</td><td><span className="mk-crs">✕</span></td><td><span className="mk-crs">✕</span></td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </>
+                                }
+
+                                {this.state.activeCompareTab === 1 &&
+                                    <>
+                                        <div className="mk-comp-label"><strong>🎯 Test Prep AI</strong> <span>— aiPlato vs. Princeton Review / Kaplan / Khan Academy AP</span></div>
+                                        <div className="mk-comp-table-wrap">
+                                            <table className="mk-comp-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th style={{ width: '32%' }}>Feature</th>
+                                                        <th className="mk-hl" style={{ width: '22%' }}>✦ aiPlato</th>
+                                                        <th style={{ width: '23%' }}>Princeton Review / Kaplan</th>
+                                                        <th style={{ width: '23%' }}>Khan Academy AP</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td>FRQ auto-grading (equations + text)</td><td className="mk-hl"><span className="mk-chk">✓</span> ~99% accuracy</td><td><span className="mk-crs">✕</span> Human-graded or MCQ only</td><td><span className="mk-crs">✕</span></td></tr>
+                                                    <tr><td>Step-level personalized feedback</td><td className="mk-hl"><span className="mk-chk">✓</span> Instant, on each attempt</td><td><span className="mk-prt">⚡ Generic hints</span></td><td><span className="mk-prt">⚡ Worked examples only</span></td></tr>
+                                                    <tr><td>AP-rubric aligned grading</td><td className="mk-hl"><span className="mk-chk">✓</span> Aligned per College Board rubric</td><td><span className="mk-prt">⚡ Approximate</span></td><td><span className="mk-crs">✕</span></td></tr>
+                                                    <tr><td>Practice Mode + Exam Mode</td><td className="mk-hl"><span className="mk-chk">✓</span> Both, fully timed</td><td><span className="mk-chk">✓</span> Timed practice</td><td><span className="mk-prt">⚡ Practice only</span></td></tr>
+                                                    <tr><td>Micro-concept gap analytics</td><td className="mk-hl"><span className="mk-chk">✓</span> 800+ AP micro-concepts</td><td><span className="mk-prt">⚡ Topic-level only</span></td><td><span className="mk-prt">⚡ Topic-level only</span></td></tr>
+                                                    <tr><td>Teacher misconception dashboard</td><td className="mk-hl"><span className="mk-chk">✓</span> Class-level analytics</td><td><span className="mk-crs">✕</span></td><td><span className="mk-crs">✕</span></td></tr>
+                                                    <tr><td>Designed by Harvard faculty</td><td className="mk-hl"><span className="mk-chk">✓</span></td><td><span className="mk-crs">✕</span></td><td><span className="mk-crs">✕</span></td></tr>
+                                                    <tr><td>Free for AAPT / APS members</td><td className="mk-hl"><span className="mk-chk">✓</span> $75 value, free</td><td><span className="mk-crs">✕</span></td><td><span className="mk-chk">✓</span> Always free</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </>
+                                }
+
+                                {this.state.activeCompareTab === 2 &&
+                                    <>
+                                        <div className="mk-comp-label"><strong>🎓 Independent Courses</strong> <span>— aiPlato vs. Stride / Coursera / Synchronous online tutoring</span></div>
+                                        <div className="mk-comp-table-wrap">
+                                            <table className="mk-comp-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th style={{ width: '32%' }}>Feature</th>
+                                                        <th className="mk-hl" style={{ width: '22%' }}>✦ aiPlato (Coming Soon)</th>
+                                                        <th style={{ width: '23%' }}>Stride Learning</th>
+                                                        <th style={{ width: '23%' }}>Synchronous Tutoring</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td>Full AP Physics curriculum</td><td className="mk-hl"><span className="mk-chk">✓</span> AP 1 &amp; 2</td><td><span className="mk-chk">✓</span></td><td><span className="mk-prt">⚡ Varies by tutor</span></td></tr>
+                                                    <tr><td>AI-powered FRQ feedback</td><td className="mk-hl"><span className="mk-chk">✓</span> Step-level, instant</td><td><span className="mk-crs">✕</span></td><td><span className="mk-prt">⚡ Human-delivered, delayed</span></td></tr>
+                                                    <tr><td>Available 24/7</td><td className="mk-hl"><span className="mk-chk">✓</span></td><td><span className="mk-chk">✓</span></td><td><span className="mk-crs">✕</span> Scheduled only</td></tr>
+                                                    <tr><td>Micro-concept proficiency tracking</td><td className="mk-hl"><span className="mk-chk">✓</span> 800+ concepts</td><td><span className="mk-prt">⚡ Grade-level only</span></td><td><span className="mk-crs">✕</span></td></tr>
+                                                    <tr><td>ESA / education savings eligible</td><td className="mk-hl"><span className="mk-chk">✓</span></td><td><span className="mk-chk">✓</span></td><td><span className="mk-prt">⚡ Varies by state</span></td></tr>
+                                                    <tr><td>Peer-reviewed effectiveness data</td><td className="mk-hl"><span className="mk-chk">✓</span> +13.9 pts on finals</td><td><span className="mk-crs">✕</span></td><td><span className="mk-crs">✕</span></td></tr>
+                                                    <tr><td>Cost per student</td><td className="mk-hl">Low (AI-delivered)</td><td>Mid</td><td>High ($50–150/hr)</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </>
+                                }
                             </div>
                         </section>
 
-                        {/* Institutional AI Policy */}
-                        <section className="mk-section mk-policy-section">
-                            <div className="mk-section-inner">
-                                <span className="mk-section-tag">Institutional AI Policy</span>
-                                <h2 className="mk-section-title">Designed to Work Within<br />Your Institution's AI Policy</h2>
-                                <p className="mk-section-body">aiPlato is purpose-built for institutional adoption — giving faculty full visibility and control while aligning with emerging academic integrity frameworks.</p>
-                                <div className="mk-policy-grid">
-                                    <div className="mk-policy-card"><div className="mk-icon">🔍</div><div><h4>Full Instructor Visibility</h4><p>Professors see every AI interaction, hint given, and step-level feedback delivered to each student — no black box. Concept Insight™ gives course-level learning gap diagnostics in real time.</p></div></div>
-                                    <div className="mk-policy-card"><div className="mk-icon">🏫</div><div><h4>Promotes Academic Integrity</h4><p>aiPlato guides students to answers rather than providing them — supporting your institution's AI use policy while actively developing students' problem-solving skills.</p></div></div>
-                                    <div className="mk-policy-card"><div className="mk-icon">📋</div><div><h4>Audit-Ready Interaction Logs</h4><p>Complete audit trails of student–AI interactions are available on demand, supporting institutional compliance reviews and accreditation documentation.</p></div></div>
-                                    <div className="mk-policy-card"><div className="mk-icon">🤝</div><div><h4>Collaborative TA + AI Model</h4><p>LiveHelp™ pairs AI with human TAs in real time — your TAs focus on higher-impact interactions while aiPlato handles routine grading and support at scale.</p></div></div>
-                                </div>
-                            </div>
-                        </section>
                     </div>
 
                     <div className='mainContainerWrapper'>

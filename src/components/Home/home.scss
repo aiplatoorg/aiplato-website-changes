@@ -1974,6 +1974,34 @@ div[class*="Carousel__RailWrapper"] {
     /* Comparison table */
     .mk-compare-section { background: #f8f9ff; }
 
+    .mk-comp-tabs {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+    }
+
+    .mk-comp-tab {
+        font-family: proxima-nova, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 9px 18px;
+        border-radius: 999px;
+        border: 1.5px solid #e2e8f0;
+        background: #fff;
+        color: #2d3436;
+        cursor: pointer;
+        transition: background 0.15s, color 0.15s, border-color 0.15s;
+
+        &:hover { border-color: #003392; color: #003392; }
+
+        &.mk-comp-tab--active {
+            background: #003392;
+            border-color: #003392;
+            color: #fff;
+        }
+    }
+
     .mk-comp-label {
         margin-bottom: 16px;
 

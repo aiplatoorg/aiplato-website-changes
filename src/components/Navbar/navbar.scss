@@ -357,6 +357,17 @@ button:not(.collapsed) {
             background: #ebeeff;
             color: #4252af;
         }
+
+        &--muted {
+            color: #6b7280;
+            font-size: 12px;
+        }
+    }
+
+    .app-nav-dropdown-divider {
+        height: 1px;
+        background: #e2e8f0;
+        margin: 6px 4px;
     }
 }
 

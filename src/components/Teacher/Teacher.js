@@ -646,6 +646,23 @@ class Teacher extends Component {
 
                     </div>
 
+                    {/* Institutional AI Policy (moved from home) */}
+                    <div className="mockupSections educatorPolicy">
+                        <section className="mk-section mk-policy-section">
+                            <div className="mk-section-inner">
+                                <span className="mk-section-tag">Institutional AI Policy</span>
+                                <h2 className="mk-section-title">Designed to Work Within<br />Your Institution's AI Policy</h2>
+                                <p className="mk-section-body">aiPlato is purpose-built for institutional adoption — giving faculty full visibility and control while aligning with emerging academic integrity frameworks.</p>
+                                <div className="mk-policy-grid">
+                                    <div className="mk-policy-card"><div className="mk-icon">🔍</div><div><h4>Full Instructor Visibility</h4><p>Professors see every AI interaction, hint given, and step-level feedback delivered to each student — no black box. Concept Insight™ gives course-level learning gap diagnostics in real time.</p></div></div>
+                                    <div className="mk-policy-card"><div className="mk-icon">🏫</div><div><h4>Promotes Academic Integrity</h4><p>aiPlato guides students to answers rather than providing them — supporting your institution's AI use policy while actively developing students' problem-solving skills.</p></div></div>
+                                    <div className="mk-policy-card"><div className="mk-icon">📋</div><div><h4>Audit-Ready Interaction Logs</h4><p>Complete audit trails of student–AI interactions are available on demand, supporting institutional compliance reviews and accreditation documentation.</p></div></div>
+                                    <div className="mk-policy-card"><div className="mk-icon">🤝</div><div><h4>Collaborative TA + AI Model</h4><p>LiveHelp™ pairs AI with human TAs in real time — your TAs focus on higher-impact interactions while aiPlato handles routine grading and support at scale.</p></div></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
                     <div>
                         <div className="secpad educator-quote-box" style={{ backgroundImage: `url(${boxEducatorBg})`, padding: '25px', borderRadius: '12px' }}>
                             <div style={{maxWidth:"1100px" , position:"relative"}}>
