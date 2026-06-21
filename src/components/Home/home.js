@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col, Container } from "react-bootstrap"
 import './home.scss';
+import { Link } from 'react-router-dom';
 import { checkCredentialsAPI, validIds, saveToDbAPI, SaveUserProfile, saveWebsiteVisitors, websitevisitorsconverted, sendMagicLinkEmail } from '../../common/API'
 import { toast } from 'react-toastify';
 import Cookies from 'universal-cookie';
@@ -294,6 +295,14 @@ class Home extends Component {
     componentDidMount() {
         let studentContainer = document.getElementById('studentsContainer');
         this.setState({ carousalCardCount: Math.floor(studentContainer.clientWidth / 280) })
+        // If we arrived with a hash (e.g. from the Products menu on another page), scroll to it.
+        if (window.location.hash) {
+            const targetId = window.location.hash.slice(1);
+            setTimeout(() => {
+                const el = document.getElementById(targetId);
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 300);
+        }
         // Defer visitor tracking so it does not compete with initial rendering.
         if ('requestIdleCallback' in window) {
             window.requestIdleCallback(() => {
@@ -627,12 +636,15 @@ class Home extends Component {
                                         <h3>Developed by Educators, for Educators</h3>
                                         <div className='homeHeroCtaGroup'>
                                             <button onClick={this.openDemoApp} className='homeHeroCta'>
-                                                Try as a student — 7-day free trial
+                                                Try Free — 7-Day Trial
                                             </button>
                                             <button onClick={this.openSubscriptionsModal} className='homeHeroCta homeHeroCtaSecondary'>
-                                                View plans
+                                                View Plans
                                             </button>
                                         </div>
+                                        <Link to="/educator" className='homeHeroForkPill'>
+                                            Are you an <strong>educator or institution?</strong> → See Educator Tools
+                                        </Link>
                                     </div>
                             </div>
                         </div>
@@ -733,6 +745,81 @@ class Home extends Component {
                                     </Col>
                                 </Row> */}
                         </div>
+                    </div>
+
+                    {/* ===== Ported from mockup: Rethinking + One Platform/Three Products ===== */}
+                    <div className="mockupSections">
+                        {/* Rethinking Education for the Age of AI */}
+                        <section className="mk-section mk-ai-era-section">
+                            <div className="mk-section-inner mk-text-center">
+                                <span className="mk-section-tag">Why aiPlato</span>
+                                <h2 className="mk-section-title">Rethinking Education for the Age of AI</h2>
+                                <p className="mk-section-body">The skills students need to thrive are changing. Beyond memorizing formulas, students must reason deeply, diagnose their own errors, and persist through hard problems — the exact capabilities AI cannot replace. aiPlato is purpose-built to develop these metacognitive and problem-solving skills, not just deliver correct answers.</p>
+                                <div className="mk-three-col">
+                                    <div className="mk-ai-era-card"><div className="mk-icon">🧠</div><h4>Reasoning Over Recall</h4><p>Step-level diagnosis identifies where understanding breaks down, not just that it did — mirroring how expert human tutors think.</p></div>
+                                    <div className="mk-ai-era-card"><div className="mk-icon">🔁</div><h4>Learns from Educators</h4><p>Continuously improves from real teaching interactions, building a compounding teaching-intelligence moat that grows with every session.</p></div>
+                                    <div className="mk-ai-era-card"><div className="mk-icon">🎯</div><h4>Metacognitive Development</h4><p>Tracks micro-concept proficiency across 800+ concepts, forming the infrastructure layer for AI-native, lifelong STEM learning.</p></div>
+                                </div>
+                            </div>
+                        </section>
+
+                        {/* One Platform. Three Products. */}
+                        <section className="mk-section mk-products-section" id="three-products">
+                            <div className="mk-section-inner">
+                                <span className="mk-section-tag">Our Platform</span>
+                                <h2 className="mk-section-title">One Platform. Three Products.<br />Built on the Same AI Core.</h2>
+                                <p className="mk-section-body">Each product extends aiPlato's proprietary teaching intelligence — grounded in 4M+ equations of real student problem-solving data.</p>
+                                <div className="mk-three-col">
+                                    <div className="mk-product-card mk-featured" id="prod-homework">
+                                        <div className="mk-product-featured-badge">Most Popular</div>
+                                        <div className="mk-product-icon">📚</div>
+                                        <h3>Homework Platform</h3>
+                                        <div className="mk-product-tagline">Replaces WebAssign · Pearson · Wiley · Cengage</div>
+                                        <p className="mk-product-desc">The most advanced online homework system for Physics — free-response grading at ~99% accuracy with step-by-step personalized feedback, 24/7.</p>
+                                        <div className="mk-product-tam">TAM: $1.2B · Already generating revenue</div>
+                                        <ul className="mk-product-features">
+                                            <li>Free-response auto-grading: equations, text, diagrams</li>
+                                            <li>Step-level feedback identifying root causes of errors</li>
+                                            <li>Proficiency map across 800+ physics micro-concepts</li>
+                                            <li>Handwritten, stylus, or keyboard equation input</li>
+                                            <li>Instructor dashboard + TA Copilot™</li>
+                                        </ul>
+                                        <Link to="/requestDemo" className="mk-btn-card">Learn More →</Link>
+                                    </div>
+                                    <div className="mk-product-card" id="prod-testprep">
+                                        <div className="mk-product-icon">🎯</div>
+                                        <h3>Test Prep AI</h3>
+                                        <div className="mk-product-tagline">AP Physics 1 &amp; 2</div>
+                                        <p className="mk-product-desc">Precision-targeted test prep powered by micro-concept mastery. AP exam-aligned rubrics, Harvard-designed practice tests, immediate diagnostic analytics.</p>
+                                        <div className="mk-product-tam">TAM: $4B D2C market · AP pilots underway</div>
+                                        <ul className="mk-product-features">
+                                            <li>5 AP Physics 1 &amp; 2 practice tests — Harvard-designed</li>
+                                            <li>Practice Mode + Exam Mode with timed simulation</li>
+                                            <li>FRQ step-by-step grading aligned to AP rubrics</li>
+                                            <li>Diagnostic analytics across 800+ concepts</li>
+                                            <li>Free access for AAPT / APS / PhysTEC members</li>
+                                        </ul>
+                                        <Link to="/requestDemo" className="mk-btn-card mk-outline">Explore Test Prep →</Link>
+                                    </div>
+                                    <div className="mk-product-card" id="prod-courses">
+                                        <div className="mk-product-coming">Coming Soon</div>
+                                        <div className="mk-product-icon">🎓</div>
+                                        <h3>Independent Courses</h3>
+                                        <div className="mk-product-tagline">Replaces Stride · Coursera · Synchronous Tutoring</div>
+                                        <p className="mk-product-desc">Full AI-powered courses for students without access to qualified instructors — starting with AP Physics 1 &amp; 2, then expanding across K–12 STEM.</p>
+                                        <div className="mk-product-tam">TAM: $1.5B+ · 1.2M AP students constrained by access</div>
+                                        <ul className="mk-product-features">
+                                            <li>Complete AP Physics curriculum, AI-delivered</li>
+                                            <li>Self-paced with adaptive proficiency checkpoints</li>
+                                            <li>ESA-eligible (Education Savings Account)</li>
+                                            <li>Expands to Calculus, Chemistry, Pre-Calc</li>
+                                            <li>One-click human tutor access</li>
+                                        </ul>
+                                        <button className="mk-btn-card mk-dim">Notify Me When Available</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </div>
 
                     {/* Blue Section Outside the main container in full width */}
