@@ -1743,6 +1743,10 @@ div[class*="Carousel__RailWrapper"] {
 /* ── Ported mockup sections: Rethinking + Three Products ────────────── */
 .mockupSections {
     font-family: proxima-nova, sans-serif;
+    /* parent .main-container is a centered flex column — stretch to full width
+       so the section backgrounds go edge-to-edge like the other sections */
+    width: 100%;
+    align-self: stretch;
 
     .mk-section {
         padding: 72px 48px;
