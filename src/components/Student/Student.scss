@@ -1,101 +1,191 @@
-.student-input-group {
-  /*background-color: #ffffff;*/
-  padding: 16px;
-  /* width: 75% !important;*/
-  border-radius: 2px;
+.studentPage {
+    font-family: proxima-nova, sans-serif;
+    color: #1a1a2e;
 
-  form {
-    width: 100%;
-
-    .form-group {
-      label {
-        color: black;
-      }
+    .sp-inner {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 24px;
     }
-  }
-}
 
-.display-4 {
-  font-size: 4.3rem !important;
-  font-weight: 700 !important;
-}
+    .sp-section { padding: 72px 0; }
 
-.btn-primary {
-  background-color: #007bda !important;
-  border-color: #007bda !important;
-}
+    .sp-section-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #4252af;
+        margin-bottom: 14px;
 
-.arial-font {
-  font-family: proxima-nova, sans-serif;
-}
+        &::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #4252af;
+        }
+    }
 
-.formbtnget {
-  background: -moz-linear-gradient(
-    0% 50% 0deg,
-    rgba(67, 127, 236, 1) 17.18%,
-    rgba(51, 108, 213, 1) 46.8%,
-    rgba(24, 78, 174, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    0deg,
-    rgba(67, 127, 236, 1) 17.18%,
-    rgba(51, 108, 213, 1) 46.8%,
-    rgba(24, 78, 174, 1) 100%
-  );
-  background: -webkit-gradient(
-    linear,
-    0% 50%,
-    100% 50%,
-    color-stop(0.1718, rgba(67, 127, 236, 1)),
-    color-stop(0.468, rgba(51, 108, 213, 1)),
-    color-stop(1, rgba(24, 78, 174, 1))
-  );
-  background: -o-linear-gradient(
-    0deg,
-    rgba(67, 127, 236, 1) 17.18%,
-    rgba(51, 108, 213, 1) 46.8%,
-    rgba(24, 78, 174, 1) 100%
-  );
-  background: -ms-linear-gradient(
-    0deg,
-    rgba(67, 127, 236, 1) 17.18%,
-    rgba(51, 108, 213, 1) 46.8%,
-    rgba(24, 78, 174, 1) 100%
-  );
-  background: linear-gradient(
-    90deg,
-    rgba(67, 127, 236, 1) 17.18%,
-    rgba(51, 108, 213, 1) 46.8%,
-    rgba(24, 78, 174, 1) 100%
-  );
-}
-.homecontmpad {
-  padding-top: 100px;
-  // padding-bottom: 100px;
-}
-.inp {
-  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
-  background-color: white !important;
-  height: 48px !important;
-  border-color: white !important;
-}
-.fontsstle {
-  font-size: 36px;
-}
-.studentContentImg {
-  // text-align: center;
-  position: relative !important;
-  align-items: center;
-  img {
-    // max-height: 400px;
-    width: 100%;
-    // -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
-    // -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
-    // box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
-  }
-}
-@media (min-width: 1441px) {
-  .large-fontsize {
-    font-size: 1.5rem;
-  }
+    .sp-section-title {
+        font-family: quincy-cf, serif;
+        font-size: 34px;
+        line-height: 1.2;
+        color: #0c1a41;
+        margin-bottom: 36px;
+    }
+
+    /* Hero */
+    .sp-hero {
+        background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        color: #fff;
+        padding: 150px 0 80px;
+        text-align: center;
+
+        .sp-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 7px 22px;
+            margin-bottom: 22px;
+        }
+
+        h1 {
+            font-family: quincy-cf, serif;
+            font-size: 44px;
+            line-height: 1.15;
+            max-width: 820px;
+            margin: 0 auto 18px;
+        }
+
+        .sp-hero-sub {
+            font-size: 18px;
+            color: #bfdbfe;
+            line-height: 1.7;
+            max-width: 680px;
+            margin: 0 auto 30px;
+        }
+
+        .sp-hero-note {
+            margin-top: 18px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+
+    .sp-cta-row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &--center { justify-content: center; }
+    }
+
+    .sp-btn {
+        font-size: 16px;
+        font-weight: 700;
+        padding: 13px 30px;
+        border-radius: 999px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.12s;
+
+        &--primary { background: #fff; color: #1c2430; border: 1px solid #fff; &:hover { background: #003392; color: #fff; } }
+        &--secondary { background: transparent; color: #fff; border: 1px solid rgba(255, 255, 255, 0.9); &:hover { background: #fff; color: #1c2430; } }
+        &--white { background: #fff; color: #003392; border: 1px solid #fff; &:hover { background: #f0f7ff; color: #003392; } }
+        &--outline-white { background: transparent; color: #fff; border: 2px solid rgba(255, 255, 255, 0.45); font-weight: 600; &:hover { background: rgba(255, 255, 255, 0.1); color: #fff; } }
+    }
+
+    /* Grids */
+    .sp-grid {
+        display: grid;
+        gap: 24px;
+
+        &--4 { grid-template-columns: repeat(4, 1fr); }
+        &--3 { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .sp-card {
+        background: #fff;
+        border: 1.5px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 28px 24px;
+
+        .sp-card-icon { font-size: 30px; margin-bottom: 14px; }
+        h4 { font-size: 17px; font-weight: 700; color: #0c1a41; margin-bottom: 8px; }
+        p { font-size: 14px; color: #5f6570; line-height: 1.6; margin: 0; }
+    }
+
+    /* Products */
+    .sp-products-section { background: #f8f9ff; }
+
+    .sp-product-card {
+        background: #fff;
+        border: 1.5px solid #e2e8f0;
+        border-radius: 18px;
+        padding: 32px 26px;
+        display: flex;
+        flex-direction: column;
+
+        .sp-card-icon { font-size: 34px; margin-bottom: 16px; }
+        h3 { font-size: 20px; font-weight: 700; color: #0c1a41; margin-bottom: 8px; }
+        p { font-size: 14px; color: #5f6570; line-height: 1.6; margin: 0 0 20px; flex: 1; }
+    }
+
+    .sp-card-link {
+        font-size: 14px;
+        font-weight: 700;
+        color: #003392;
+        text-decoration: none;
+
+        &:hover { text-decoration: underline; }
+        &--soon { color: #94a3b8; cursor: default; &:hover { text-decoration: none; } }
+    }
+
+    /* Mastery steps */
+    .sp-steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .sp-step {
+        background: #fff;
+        border: 1.5px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 28px 22px;
+        text-align: center;
+
+        .sp-step-icon { font-size: 30px; margin-bottom: 12px; }
+        h4 { font-size: 16px; font-weight: 700; color: #0c1a41; margin-bottom: 8px; }
+        p { font-size: 14px; color: #5f6570; line-height: 1.55; margin: 0; }
+    }
+
+    /* Final CTA */
+    .sp-final-cta {
+        background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        color: #fff;
+        text-align: center;
+
+        h2 { font-family: quincy-cf, serif; font-size: 34px; margin-bottom: 14px; }
+        p { font-size: 18px; color: #bfdbfe; margin-bottom: 30px; }
+    }
+
+    @media (max-width: 900px) {
+        .sp-section { padding: 56px 0; }
+        .sp-hero { padding: 130px 0 64px; h1 { font-size: 32px; } }
+        .sp-section-title { font-size: 26px; }
+        .sp-grid--4 { grid-template-columns: 1fr 1fr; }
+        .sp-grid--3 { grid-template-columns: 1fr; }
+        .sp-steps { grid-template-columns: 1fr 1fr; }
+    }
 }

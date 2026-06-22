@@ -634,7 +634,7 @@ class Home extends Component {
                                     ></video>
                                     <div className='homeHeroContent'>
                                         <h1>AI Teaching Assistant for STEM</h1>
-                                        <h3>Developed by Educators, for Educators</h3>
+                                        <h3>Built by educators — to help every student master STEM</h3>
                                         <div className='homeHeroCtaGroup'>
                                             <button onClick={this.openDemoApp} className='homeHeroCta'>
                                                 Try Free — 7-Day Trial
@@ -643,9 +643,14 @@ class Home extends Component {
                                                 View Plans
                                             </button>
                                         </div>
-                                        <Link to="/educator" className='homeHeroForkPill'>
-                                            Are you an <strong>educator or institution?</strong> → See Educator Tools
-                                        </Link>
+                                        <div className='homeHeroPaths'>
+                                            <Link to="/student" className='homeHeroForkPill'>
+                                                For <strong>Students</strong> → Learn &amp; ace your exams
+                                            </Link>
+                                            <Link to="/educator" className='homeHeroForkPill'>
+                                                For <strong>Educators &amp; Institutions</strong> → See Educator Tools
+                                            </Link>
+                                        </div>
                                     </div>
                             </div>
                         </div>

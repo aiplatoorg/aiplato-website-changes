@@ -1711,6 +1711,15 @@ div[class*="Carousel__RailWrapper"] {
     padding: 0 35px !important; 
 }
 }
+/* ── Hero dual-audience paths (Students / Educators) ────────────────── */
+.homeHeroPaths {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
 /* ── Hero educator fork pill (ported from mockup) ───────────────────── */
 .homeHeroForkPill {
     font-family: proxima-nova, sans-serif;
