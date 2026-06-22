@@ -131,6 +131,7 @@ class Navigation extends Component {
                     </div>
                   </div>
 
+                  <Hyperlink onLinkClick={this.onMenuItemSelection} type="Link_Primary" className="nav-item" href="/student">Students</Hyperlink>
                   <Hyperlink onLinkClick={this.onMenuItemSelection} type="Link_Primary" className="nav-item" href="/educator">Educators</Hyperlink>
 
                   {/* About dropdown */}
@@ -171,6 +172,7 @@ class Navigation extends Component {
                 <Link onClick={this.onMenuItemSelection} to="/products/courses" className="nav-link app-mobile-subitem">🎓 Full Course Experience</Link>
                 <a href={`${process.env.PUBLIC_URL}/#compare-platforms`} onClick={this.scrollToHome('compare-platforms')} className="nav-link app-mobile-subitem">↗ Compare Platforms</a>
 
+                <Hyperlink onLinkClick={this.onMenuItemSelection} type="Link_Primary" className="nav-item" href="/student">Students</Hyperlink>
                 <Hyperlink onLinkClick={this.onMenuItemSelection} type="Link_Primary" className="nav-item" href="/educator">Educators</Hyperlink>
 
                 <div className="app-mobile-group-label">About</div>
