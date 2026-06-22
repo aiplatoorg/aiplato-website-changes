@@ -824,51 +824,69 @@ class Home extends Component {
                         {/* One Platform. Three Products. */}
                         <section className="mk-section mk-products-section" id="three-products">
                             <div className="mk-section-inner">
-                                <span className="mk-section-tag">Our Platform</span>
+                                <span className="mk-section-tag">Our Products</span>
                                 <h2 className="mk-section-title">One Platform. Three Products.<br />Built on the Same AI Core.</h2>
                                 <p className="mk-section-body">Each product extends aiPlato's proprietary teaching intelligence — grounded in 4M+ equations of real student problem-solving data.</p>
-                                <div className="mk-three-col">
-                                    <div className="mk-product-card mk-featured" id="prod-homework">
-                                        <div className="mk-product-featured-badge">Most Popular</div>
-                                        <div className="mk-product-icon">📚</div>
-                                        <h3>Homework & Class Platform</h3>
-                                        <div className="mk-product-tagline">Replaces WebAssign · Pearson · Wiley · Cengage</div>
-                                        <p className="mk-product-desc">The most advanced online homework system for Physics — free-response grading at ~99% accuracy with step-by-step personalized feedback, 24/7.</p>
+                                <div className="mk-three-col mk-product-card-grid">
+                                    <div className="mk-product-card mk-product-card--primary" id="prod-testprep">
+                                        <span className="mk-product-badge">AP Test Prep</span>
+                                        <h3>Prepare with real AP-style practice tests and AI feedback</h3>
                                         <ul className="mk-product-features">
-                                            <li>Free-response auto-grading: equations, text, diagrams</li>
-                                            <li>Step-level feedback identifying root causes of errors</li>
-                                            <li>Proficiency map across 800+ physics micro-concepts</li>
-                                            <li>Handwritten, stylus, or keyboard equation input</li>
-                                            <li>Instructor dashboard + TA Copilot™</li>
+                                            <li>Full-length AP Physics practice tests — Practice &amp; Exam Mode</li>
+                                            <li>Step-by-step AI grading, personalized to student errors</li>
+                                            <li>Instant scoring with diagnostic analytics</li>
+                                            <li>Identifies root causes across 800+ AP micro-concepts</li>
+                                            <li>Personalized plan to reach mastery</li>
                                         </ul>
-                                        <Link to="/products/homework" className="mk-btn-card">Learn More →</Link>
+
+                                        <div className="mk-mode-callout">
+                                            <div className="mk-mode-col">
+                                                <div className="mk-mode-icon">📝</div>
+                                                <div className="mk-mode-name">Practice Mode</div>
+                                                <ul>
+                                                    <li>Guided Learning</li>
+                                                    <li>Concept Feedback</li>
+                                                </ul>
+                                            </div>
+                                            <div className="mk-mode-col mk-mode-col--exam">
+                                                <div className="mk-mode-icon">⏱</div>
+                                                <div className="mk-mode-name">Exam Mode</div>
+                                                <ul>
+                                                    <li>Real Test Simulation</li>
+                                                    <li>Instant Review</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <Link to="/products/test-prep" className="mk-btn-card">Explore Test Prep →</Link>
                                     </div>
-                                    <div className="mk-product-card" id="prod-testprep">
-                                        <div className="mk-product-icon">🎯</div>
-                                        <h3>AP Test Prep</h3>
-                                        <div className="mk-product-tagline">AP Physics 1 &amp; 2</div>
-                                        <p className="mk-product-desc">Precision-targeted test prep powered by micro-concept mastery. AP exam-aligned rubrics, Harvard-designed practice tests, immediate diagnostic analytics.</p>
+
+                                    <div className="mk-product-card mk-product-card--green" id="prod-homework">
+                                        <span className="mk-product-badge mk-product-badge--green">Homework &amp; Class Platform</span>
+                                        <h3>Assignments with step-by-step grading and insights</h3>
                                         <ul className="mk-product-features">
-                                            <li>5 AP Physics 1 &amp; 2 practice tests — Harvard-designed</li>
-                                            <li>Practice Mode + Exam Mode with timed simulation</li>
-                                            <li>FRQ step-by-step grading aligned to AP rubrics</li>
-                                            <li>Diagnostic analytics across 800+ concepts</li>
-                                            <li>Free access for AAPT / APS / PhysTEC members</li>
+                                            <li>Structured assignments &amp; FRQs</li>
+                                            <li>Step-by-step grading + feedback</li>
+                                            <li>Misconception identification</li>
+                                            <li>Interactive proficiency maps</li>
+                                            <li>Instructor dashboard + reports</li>
+                                            <li>Canvas / Moodle integration</li>
                                         </ul>
-                                        <Link to="/products/test-prep" className="mk-btn-card mk-outline">Explore Test Prep →</Link>
+                                        <Link to="/products/homework" className="mk-btn-card mk-btn-card--green">Learn More →</Link>
                                     </div>
-                                    <div className="mk-product-card" id="prod-courses">
-                                        <div className="mk-product-coming">Coming Soon</div>
-                                        <div className="mk-product-icon">🎓</div>
-                                        <h3>Full Course Experience</h3>
-                                        <div className="mk-product-tagline">Replaces Stride · Coursera · Synchronous Tutoring</div>
-                                        <p className="mk-product-desc">Full AI-powered courses for students without access to qualified instructors — starting with AP Physics 1 &amp; 2, then expanding across K–12 STEM.</p>
+
+                                    <div className="mk-product-card mk-product-card--muted" id="prod-courses">
+                                        <span className="mk-product-badge mk-product-badge--muted">Full Course Experience</span>
+                                        <p className="mk-product-optional">Coming Soon</p>
+                                        <h3>Complete AP course: lectures, homework &amp; test prep in one place</h3>
                                         <ul className="mk-product-features">
-                                            <li>Complete AP Physics curriculum, AI-delivered</li>
-                                            <li>Self-paced with adaptive proficiency checkpoints</li>
-                                            <li>ESA-eligible (Education Savings Account)</li>
-                                            <li>Expands to Calculus, Chemistry, Pre-Calc</li>
-                                            <li>One-click human tutor access</li>
+                                            <li>AI-powered video lectures — interactive</li>
+                                            <li>AI-powered lecture notes — interactive</li>
+                                            <li>Personalized week-by-week learning plan</li>
+                                            <li>Weekly progress updates to parents &amp; teachers</li>
+                                            <li className="mk-features-divider"><span>Also includes</span></li>
+                                            <li className="mk-feature-included">Homework Platform</li>
+                                            <li className="mk-feature-included">AP Test Prep Platform</li>
                                         </ul>
                                         <Link to="/products/courses" className="mk-btn-card mk-outline">Learn More →</Link>
                                     </div>

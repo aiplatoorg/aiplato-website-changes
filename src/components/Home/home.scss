@@ -1847,42 +1847,78 @@ div[class*="Carousel__RailWrapper"] {
     /* Three Products */
     .mk-products-section { background: #fff; }
 
+    .mk-product-card-grid {
+        align-items: stretch;
+    }
+
     .mk-product-card {
         background: #fff;
         border-radius: 22px;
-        padding: 36px 28px;
+        padding: 34px 28px 28px;
         border: 1.5px solid #e2e8f0;
         position: relative;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(66, 82, 175, 0.08);
         transition: box-shadow 0.2s, transform 0.2s;
+        display: flex;
+        flex-direction: column;
 
         &:hover {
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.11);
             transform: translateY(-3px);
         }
 
-        &.mk-featured {
+        &.mk-product-card--primary {
             border-color: #003392;
             box-shadow: 0 4px 24px rgba(0, 51, 146, 0.13);
         }
 
-        h3 { font-size: 21px; font-weight: 700; color: #0c1a41; margin-bottom: 6px; }
+        &.mk-product-card--green {
+            border-color: rgba(57, 133, 84, 0.35);
+            background: linear-gradient(180deg, #ffffff 0%, #f5fbf7 100%);
+        }
+
+        &.mk-product-card--muted {
+            background: linear-gradient(180deg, #ffffff 0%, #f8f9fc 100%);
+        }
+
+        h3 {
+            font-family: quincy-cf, serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #0c1a41;
+            margin-bottom: 18px;
+            line-height: 1.22;
+        }
     }
 
-    .mk-product-featured-badge {
-        position: absolute;
-        top: -13px;
-        left: 50%;
-        transform: translateX(-50%);
+    .mk-product-badge {
+        display: inline-flex;
+        align-self: flex-start;
+        margin-bottom: 14px;
         background: #003392;
         color: #fff;
         font-size: 11px;
         font-weight: 700;
         letter-spacing: 0.06em;
         text-transform: uppercase;
-        padding: 4px 16px;
+        padding: 5px 14px;
         border-radius: 20px;
         white-space: nowrap;
+
+        &.mk-product-badge--green {
+            background: #398554;
+        }
+
+        &.mk-product-badge--muted {
+            background: #6b7280;
+        }
+    }
+
+    .mk-product-optional {
+        margin: -4px 0 12px;
+        color: #f59e0b;
+        font-size: 13px;
+        font-weight: 700;
     }
 
     .mk-product-icon { font-size: 38px; margin-bottom: 18px; }
@@ -1918,6 +1954,7 @@ div[class*="Carousel__RailWrapper"] {
         list-style: none;
         padding-left: 0;
         margin-bottom: 24px;
+        flex: 1;
 
         li {
             font-size: 13px;
@@ -1925,6 +1962,7 @@ div[class*="Carousel__RailWrapper"] {
             padding: 5px 0;
             display: flex;
             gap: 8px;
+            line-height: 1.4;
 
             &::before {
                 content: '✓';
@@ -1932,21 +1970,86 @@ div[class*="Carousel__RailWrapper"] {
                 font-weight: 700;
                 flex-shrink: 0;
             }
+
+            &.mk-features-divider {
+                align-items: center;
+                gap: 8px;
+                margin: 4px 0 6px;
+                padding: 0;
+
+                &::before,
+                &::after {
+                    content: '';
+                    flex: 1;
+                    height: 1px;
+                    background: #e0e4ed;
+                }
+
+                span {
+                    color: #888;
+                    font-size: 11px;
+                    font-weight: 700;
+                    letter-spacing: 0.06em;
+                    text-transform: uppercase;
+                    white-space: nowrap;
+                }
+            }
+
+            &.mk-feature-included {
+                color: #003392;
+                font-weight: 700;
+
+                &::before {
+                    content: '+';
+                    color: #003392;
+                }
+            }
         }
     }
 
-    .mk-product-coming {
-        position: absolute;
-        top: 16px;
-        right: 16px;
-        background: #f59e0b;
-        color: #fff;
-        font-size: 10px;
+    .mk-mode-callout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin: 4px 0 22px;
+        padding: 12px;
+        border-radius: 16px;
+        background: #f4f7ff;
+        border: 1px solid #dce5fb;
+    }
+
+    .mk-mode-col {
+        border-radius: 12px;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        padding: 12px;
+        text-align: center;
+
+        &.mk-mode-col--exam {
+            background: #f8fbff;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 8px 0 0;
+            color: #666;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+    }
+
+    .mk-mode-icon {
+        color: #003392;
+        font-size: 18px;
+        line-height: 1;
+        margin-bottom: 6px;
+    }
+
+    .mk-mode-name {
+        color: #003392;
+        font-size: 13px;
         font-weight: 700;
-        padding: 3px 10px;
-        border-radius: 20px;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
     }
 
     .mk-btn-card {
@@ -1964,6 +2067,11 @@ div[class*="Carousel__RailWrapper"] {
         text-decoration: none;
 
         &:hover { background: #002270; color: #fff; text-decoration: none; }
+
+        &.mk-btn-card--green {
+            background: #398554;
+            &:hover { background: #2f6f46; }
+        }
 
         &.mk-outline {
             background: transparent;
