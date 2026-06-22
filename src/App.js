@@ -31,6 +31,7 @@ const SignUpPlans = lazy(() => import('./components/SignUp/SignUpPlans'));
 const RequestDemo = lazy(() => import('./components/Teacher/RequestDemo'));
 const Resources = lazy(() => import('./components/Resources/Resources'));
 const MagicLinkVerify = lazy(() => import('./components/MagicLinkVerify/MagicLinkVerify'));
+const TestPrep = lazy(() => import('./components/Products/TestPrep'));
 
 
 function App() {
@@ -78,6 +79,7 @@ function App() {
           <Route path="/earlyaccesspriorityinfo/:earlyaccessid?" exact component={UserInfo} />
           <Route path="/student" exact component={Student} />
           <Route path="/educator" exact component={Teacher} />
+          <Route path="/products/test-prep" exact component={TestPrep} />
           <Route path="/team" exact component={Team} />
           <Route path="/careers" exact component={Career} />
           <Route path="/contact" exact component={ContactUs} />

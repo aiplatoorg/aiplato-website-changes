@@ -826,7 +826,7 @@ class Home extends Component {
                                     <div className="mk-product-card mk-featured" id="prod-homework">
                                         <div className="mk-product-featured-badge">Most Popular</div>
                                         <div className="mk-product-icon">📚</div>
-                                        <h3>Homework Platform</h3>
+                                        <h3>Homework & Class Platform</h3>
                                         <div className="mk-product-tagline">Replaces WebAssign · Pearson · Wiley · Cengage</div>
                                         <p className="mk-product-desc">The most advanced online homework system for Physics — free-response grading at ~99% accuracy with step-by-step personalized feedback, 24/7.</p>
                                         <ul className="mk-product-features">
@@ -840,7 +840,7 @@ class Home extends Component {
                                     </div>
                                     <div className="mk-product-card" id="prod-testprep">
                                         <div className="mk-product-icon">🎯</div>
-                                        <h3>Test Prep AI</h3>
+                                        <h3>AP Test Prep</h3>
                                         <div className="mk-product-tagline">AP Physics 1 &amp; 2</div>
                                         <p className="mk-product-desc">Precision-targeted test prep powered by micro-concept mastery. AP exam-aligned rubrics, Harvard-designed practice tests, immediate diagnostic analytics.</p>
                                         <ul className="mk-product-features">
@@ -850,12 +850,12 @@ class Home extends Component {
                                             <li>Diagnostic analytics across 800+ concepts</li>
                                             <li>Free access for AAPT / APS / PhysTEC members</li>
                                         </ul>
-                                        <Link to="/requestDemo" className="mk-btn-card mk-outline">Explore Test Prep →</Link>
+                                        <Link to="/products/test-prep" className="mk-btn-card mk-outline">Explore Test Prep →</Link>
                                     </div>
                                     <div className="mk-product-card" id="prod-courses">
                                         <div className="mk-product-coming">Coming Soon</div>
                                         <div className="mk-product-icon">🎓</div>
-                                        <h3>Independent Courses</h3>
+                                        <h3>Full Course Experience</h3>
                                         <div className="mk-product-tagline">Replaces Stride · Coursera · Synchronous Tutoring</div>
                                         <p className="mk-product-desc">Full AI-powered courses for students without access to qualified instructors — starting with AP Physics 1 &amp; 2, then expanding across K–12 STEM.</p>
                                         <ul className="mk-product-features">
@@ -878,14 +878,14 @@ class Home extends Component {
                                 <h2 className="mk-section-title">Why Institutions Are Switching to aiPlato</h2>
                                 <p className="mk-section-body">The only platform with ~99% free-response accuracy, peer-reviewed learning outcomes, and a complete teaching-intelligence layer built from real educator interactions.</p>
                                 <div className="mk-comp-tabs">
-                                    <button type="button" className={this.state.activeCompareTab === 0 ? "mk-comp-tab mk-comp-tab--active" : "mk-comp-tab"} onClick={() => this.setState({ activeCompareTab: 0 })}>📚 Homework Platform</button>
-                                    <button type="button" className={this.state.activeCompareTab === 1 ? "mk-comp-tab mk-comp-tab--active" : "mk-comp-tab"} onClick={() => this.setState({ activeCompareTab: 1 })}>🎯 Test Prep AI</button>
-                                    <button type="button" className={this.state.activeCompareTab === 2 ? "mk-comp-tab mk-comp-tab--active" : "mk-comp-tab"} onClick={() => this.setState({ activeCompareTab: 2 })}>🎓 Independent Courses</button>
+                                    <button type="button" className={this.state.activeCompareTab === 0 ? "mk-comp-tab mk-comp-tab--active" : "mk-comp-tab"} onClick={() => this.setState({ activeCompareTab: 0 })}>📚 Homework & Class Platform</button>
+                                    <button type="button" className={this.state.activeCompareTab === 1 ? "mk-comp-tab mk-comp-tab--active" : "mk-comp-tab"} onClick={() => this.setState({ activeCompareTab: 1 })}>🎯 AP Test Prep</button>
+                                    <button type="button" className={this.state.activeCompareTab === 2 ? "mk-comp-tab mk-comp-tab--active" : "mk-comp-tab"} onClick={() => this.setState({ activeCompareTab: 2 })}>🎓 Full Course Experience</button>
                                 </div>
 
                                 {this.state.activeCompareTab === 0 &&
                                     <>
-                                        <div className="mk-comp-label"><strong>📚 Homework Platform</strong> <span>— aiPlato vs. WebAssign / Pearson MyLab / WileyPLUS / Cengage</span></div>
+                                        <div className="mk-comp-label"><strong>📚 Homework & Class Platform</strong> <span>— aiPlato vs. WebAssign / Pearson MyLab / WileyPLUS / Cengage</span></div>
                                         <div className="mk-comp-table-wrap">
                                             <table className="mk-comp-table">
                                                 <thead>
@@ -913,7 +913,7 @@ class Home extends Component {
 
                                 {this.state.activeCompareTab === 1 &&
                                     <>
-                                        <div className="mk-comp-label"><strong>🎯 Test Prep AI</strong> <span>— aiPlato vs. Princeton Review / Kaplan / Khan Academy AP</span></div>
+                                        <div className="mk-comp-label"><strong>🎯 AP Test Prep</strong> <span>— aiPlato vs. Princeton Review / Kaplan / Khan Academy AP</span></div>
                                         <div className="mk-comp-table-wrap">
                                             <table className="mk-comp-table">
                                                 <thead>
@@ -941,7 +941,7 @@ class Home extends Component {
 
                                 {this.state.activeCompareTab === 2 &&
                                     <>
-                                        <div className="mk-comp-label"><strong>🎓 Independent Courses</strong> <span>— aiPlato vs. Stride / Coursera / Synchronous online tutoring</span></div>
+                                        <div className="mk-comp-label"><strong>🎓 Full Course Experience</strong> <span>— aiPlato vs. Stride / Coursera / Synchronous online tutoring</span></div>
                                         <div className="mk-comp-table-wrap">
                                             <table className="mk-comp-table">
                                                 <thead>
