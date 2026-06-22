@@ -1,0 +1,203 @@
+/* Shared marketing styles for product pages (Homework, Courses). */
+.productPage {
+    font-family: proxima-nova, sans-serif;
+    color: #1a1a2e;
+
+    .pp-inner {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+
+    .pp-section { padding: 72px 0; }
+
+    .pp-section-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #4252af;
+        margin-bottom: 14px;
+
+        &::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #4252af;
+        }
+    }
+
+    .pp-section-title {
+        font-family: quincy-cf, serif;
+        font-size: 34px;
+        line-height: 1.2;
+        color: #0c1a41;
+        margin-bottom: 14px;
+    }
+
+    .pp-section-body {
+        font-size: 17px;
+        color: #5f6570;
+        line-height: 1.7;
+        max-width: 680px;
+        margin-bottom: 36px;
+    }
+
+    /* Hero */
+    .pp-hero {
+        background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        color: #fff;
+        padding: 150px 0 80px;
+        text-align: center;
+
+        .pp-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 7px 22px;
+            margin-bottom: 22px;
+        }
+
+        .pp-badge-soon {
+            background: #f59e0b;
+            color: #fff;
+            border-radius: 20px;
+            padding: 2px 10px;
+            font-size: 10px;
+        }
+
+        h1 {
+            font-family: quincy-cf, serif;
+            font-size: 44px;
+            line-height: 1.15;
+            max-width: 840px;
+            margin: 0 auto 18px;
+        }
+
+        .pp-hero-sub {
+            font-size: 18px;
+            color: #bfdbfe;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .pp-hero-note {
+            margin-top: 18px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+
+    .pp-cta-row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pp-btn {
+        font-size: 16px;
+        font-weight: 700;
+        padding: 13px 30px;
+        border-radius: 999px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background 0.18s, color 0.18s, transform 0.12s;
+
+        &--primary { background: #fff; color: #1c2430; border: 1px solid #fff; &:hover { background: #003392; color: #fff; } }
+        &--secondary { background: transparent; color: #fff; border: 1px solid rgba(255, 255, 255, 0.9); &:hover { background: #fff; color: #1c2430; } }
+        &--white { background: #fff; color: #003392; border: 1px solid #fff; &:hover { background: #f0f7ff; color: #003392; } }
+        &--outline-white { background: transparent; color: #fff; border: 2px solid rgba(255, 255, 255, 0.45); font-weight: 600; &:hover { background: rgba(255, 255, 255, 0.1); color: #fff; } }
+    }
+
+    .pp-replaces {
+        font-size: 13px;
+        font-weight: 600;
+        color: #003392;
+        background: #ebeeff;
+        border-radius: 6px;
+        padding: 6px 14px;
+        display: inline-block;
+        margin-bottom: 28px;
+    }
+
+    /* Feature grid */
+    .pp-features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px 32px;
+
+        li { display: flex; gap: 12px; align-items: flex-start; font-size: 16px; color: #374151; line-height: 1.5; }
+    }
+
+    .pp-check { color: #398554; font-weight: 700; flex-shrink: 0; }
+
+    .pp-alt { background: #f8f9ff; }
+
+    /* Audience split cards */
+    .pp-two { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+    .pp-aud-card {
+        background: #fff;
+        border: 1.5px solid #e2e8f0;
+        border-radius: 18px;
+        padding: 32px 28px;
+
+        .pp-aud-icon { font-size: 32px; margin-bottom: 14px; }
+        h3 { font-size: 20px; font-weight: 700; color: #0c1a41; margin-bottom: 10px; }
+        p { font-size: 15px; color: #5f6570; line-height: 1.6; margin-bottom: 20px; }
+    }
+
+    /* Roadmap */
+    .pp-roadmap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+    .pp-roadmap-card {
+        border: 1.5px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 24px 18px;
+        text-align: center;
+        background: #fff;
+
+        &--active { border-color: #bfdbfe; background: #f0f7ff; }
+
+        .pp-rm-icon { font-size: 28px; margin-bottom: 10px; }
+        .pp-rm-name { font-size: 15px; font-weight: 700; color: #0c1a41; margin-bottom: 6px; }
+        .pp-rm-status { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: #94a3b8; }
+        &--active .pp-rm-status { color: #003392; }
+    }
+
+    /* Final CTA */
+    .pp-final-cta {
+        background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        color: #fff;
+        text-align: center;
+
+        h2 { font-family: quincy-cf, serif; font-size: 34px; margin-bottom: 14px; }
+        p { font-size: 18px; color: #bfdbfe; margin-bottom: 30px; }
+        .pp-cta-row { justify-content: center; }
+    }
+
+    @media (max-width: 900px) {
+        .pp-section { padding: 56px 0; }
+        .pp-hero { padding: 130px 0 64px; h1 { font-size: 32px; } }
+        .pp-section-title { font-size: 26px; }
+        .pp-features { grid-template-columns: 1fr; }
+        .pp-two { grid-template-columns: 1fr; }
+        .pp-roadmap { grid-template-columns: 1fr 1fr; }
+    }
+}

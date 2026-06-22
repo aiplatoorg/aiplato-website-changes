@@ -841,7 +841,7 @@ class Home extends Component {
                                             <li>Handwritten, stylus, or keyboard equation input</li>
                                             <li>Instructor dashboard + TA Copilot™</li>
                                         </ul>
-                                        <Link to="/educator" className="mk-btn-card">Learn More →</Link>
+                                        <Link to="/products/homework" className="mk-btn-card">Learn More →</Link>
                                     </div>
                                     <div className="mk-product-card" id="prod-testprep">
                                         <div className="mk-product-icon">🎯</div>
@@ -870,7 +870,7 @@ class Home extends Component {
                                             <li>Expands to Calculus, Chemistry, Pre-Calc</li>
                                             <li>One-click human tutor access</li>
                                         </ul>
-                                        <button className="mk-btn-card mk-dim">Notify Me When Available</button>
+                                        <Link to="/products/courses" className="mk-btn-card mk-outline">Learn More →</Link>
                                     </div>
                                 </div>
                             </div>
